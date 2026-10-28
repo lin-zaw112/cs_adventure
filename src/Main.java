@@ -5,5 +5,6 @@ public class Main {
         System.out.println("I like sweaty armpits");
         System.out.println("Bruh");
         System.out.println("Love you Bros!");
+        System.out.println("Hi");
     }
 }
