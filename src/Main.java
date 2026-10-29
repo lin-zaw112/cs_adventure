@@ -7,6 +7,8 @@ public class Main {
             Player player = new Player();
             util.clearConsole();
             System.out.print("Enter Your Name: ");
+
+
             // ! Check if the input is a valid string
             while (!sc.hasNextLine()) {
                 System.out.println("Invalid input. Please enter a valid name.");
@@ -16,6 +18,8 @@ public class Main {
             // * Set the player's name and generate a random luck value
             player.setName(name);
             player.setLuck(util.getRandomNumber(0, 6));
+
+
             // * Clear the console and display the player's information
             util.clearConsole();
             util.display(player);
