@@ -11,32 +11,9 @@ public class Player {
         this.stress = 0;
         this.luck = 0;
     }
-
-    public Player(String name) {
-        this.name = name;
-        this.stress = 0;
-        this.luck = 0;
-    }
-
-    public Player(String name, int stress, int luck) {
-        this.name = name;
-        this.stress = stress;
-        this.luck = luck;
-    }
     //endregion
 
     //region Getters
-    public String getName() {
-        return name;
-    }
-
-    public int getStress() {
-        return stress;
-    }
-
-    public int getLuck() {
-        return luck;
-    }
 
     public String getStressLevel() {
         if (stress == 0) {
@@ -62,6 +39,13 @@ public class Player {
             return luck + " (You are luckest person in the world!)";
         }
     }
+
+    public void display() {
+        System.out.println("Player Name  : " + this.name);
+        System.out.println("Stress Level : " + this.getStressLevel());
+        System.out.println("Luck Level   : " + this.getLuckLevel());
+    }
+
     //endregion
 
     //region Setters
@@ -69,13 +53,14 @@ public class Player {
         this.name = name;
     }
 
-    public void setStress(int stress) {
-        this.stress = stress;
+    public void changeStress(int amount) {
+        stress = Math.clamp(stress + amount, 0, 100);
     }
 
-    public void setLuck(int luck) {
-        this.luck = luck;
+    public void changeLuck(int amount) {
+        luck = Math.clamp(luck + amount, 0, 6);
     }
+
     //endregion
 
 }
