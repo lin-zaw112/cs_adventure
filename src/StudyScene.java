@@ -1,15 +1,15 @@
 
 
 public class StudyScene extends Scene{
-      public StudyScene() {
+    public StudyScene() {
         super("After having Lunch, You choose to study.", "");
-      }
+    }
 
-      @Override
+    @Override
     public void display() {
         System.out.println(getTitle());
         System.out.println();
-     
+    
     }
 
     @Override
@@ -62,7 +62,7 @@ public class StudyScene extends Scene{
         //will need a takenotes booelan from calculus Scene
         boolean takeNotes = false; // This should be set based on the player's previous actions in the game. delete this after the calculus scene is implemented
         if(takeNotes == true){
-          System.out.println();
+        System.out.println();
         // * Display the scene's title and description
         display();
         System.out.println("B. You take out books and laptop from your bag. You need to lock in and review your notes.");
@@ -104,7 +104,7 @@ public class StudyScene extends Scene{
         System.out.println();
         Input.Continue();
         }else{
-          System.out.println();
+        System.out.println();
         // * Display the scene's title and description
         display();
         System.out.println("C. You found out you did not take any notes and realized that you are cooked.  ");
@@ -152,11 +152,11 @@ public class StudyScene extends Scene{
         System.out.println();
         Input.Continue();
         }
-      
+    
 
       //question3
 
-      System.out.println();
+    System.out.println();
         // * Display the scene's title and description
         display();
         System.out.println("C. You hve been studying for hours without moving. You feel tired and your eyes are sore. You need to take a break.");
@@ -164,6 +164,7 @@ public class StudyScene extends Scene{
         System.out.println("[1] You try to move around and stretch every hour.");
         System.out.println("[2] You keep studying without moving. ");
         System.out.println();
+
         int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
 
         // * Clear the console and update the player's stress and luck based on their choice
@@ -181,11 +182,13 @@ public class StudyScene extends Scene{
         player.display();
         System.out.println();
         display();
+
         System.out.println("C. You hve been studying for hours without moving. You feel tired and your eyes are sore. You need to take a break.");
         System.out.println();
         System.out.println("[1] You try to move around and stretch every hour.");
         System.out.println("[2] You keep studying without moving. ");
         System.out.println();
+
         switch (choice3) {
             case 1:
                 System.out.println("You try to move around and stretch every hour. You feel refreshed and focused.");
@@ -196,13 +199,6 @@ public class StudyScene extends Scene{
         }
 
         System.out.println();
-        Input.Continue();
-
-
-
-        
-        
-    } 
-  
-    
+        Input.Continue();        
+    }  
 }
