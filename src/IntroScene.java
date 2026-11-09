@@ -24,11 +24,13 @@ public class IntroScene extends Scene {
         System.out.println();
         // * Display the scene's title and description
         display();
+        
         try{
             Thread.sleep(3000);
         }catch(Exception e){
             System.out.println("Sorry some error. We'll fix it immediately.");
         }
+
 
         displayQ("You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
                 "1. Reply that you will share the notes later.\n" +
