@@ -1,17 +1,15 @@
 
 
-public class StudyScene extends Scene{
+public class StudyScene extends Scene {
     public StudyScene() {
         super("After having Lunch, You choose to study.", "");
     }
-
     @Override
     public void display() {
         System.out.println(getTitle());
         System.out.println();
     
     }
-
     @Override
     public void play(Player player) {
       //question1
@@ -24,7 +22,6 @@ public class StudyScene extends Scene{
         System.out.println("[2] You choose to go home.");
         System.out.println();
         int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
-
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         
@@ -36,8 +33,6 @@ public class StudyScene extends Scene{
                 player.changeStress(0);
                 break;
         }
-
-
         player.display();
         
         System.out.println();
@@ -55,7 +50,6 @@ public class StudyScene extends Scene{
                 System.out.println("You choose to study at home. You feel comfortable but easily distracted.");
                 break;
         }
-
         System.out.println();
         Input.Continue();
         //question2
@@ -113,7 +107,6 @@ public class StudyScene extends Scene{
         System.out.println("[3] You just accept your fate. ");
         System.out.println();
         int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
-
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice2) {
@@ -127,8 +120,6 @@ public class StudyScene extends Scene{
                 player.changeStress(-10);
                 break;
         }
-
-
         player.display();
         System.out.println();
         display();
@@ -138,7 +129,6 @@ public class StudyScene extends Scene{
         System.out.println("[2] Start panicking and run around the place frantically. ");
         System.out.println("[3] You just accept your fate. ");
         System.out.println();
-
         switch (choice2) {
             case 1:
                 System.out.println("You start practicing questions and only look at the notes when necessary. You feel confident and prepared for the exam.");
@@ -147,14 +137,10 @@ public class StudyScene extends Scene{
                 System.out.println("You look at the notes from page one to the end. You feel overwhelmed and stressed out.");
                 break;
         }
-
         System.out.println();
         Input.Continue();
         }
-    
-
-      //question3
-
+    //question3
     System.out.println();
         // * Display the scene's title and description
         display();
@@ -163,9 +149,7 @@ public class StudyScene extends Scene{
         System.out.println("[1] You try to move around and stretch every hour.");
         System.out.println("[2] You keep studying without moving. ");
         System.out.println();
-
         int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
-
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice3) {
@@ -176,18 +160,14 @@ public class StudyScene extends Scene{
                 player.changeStress(5);
                 break;
         }
-
-
         player.display();
         System.out.println();
         display();
-
         System.out.println("C. You hve been studying for hours without moving. You feel tired and your eyes are sore. You need to take a break.");
         System.out.println();
         System.out.println("[1] You try to move around and stretch every hour.");
         System.out.println("[2] You keep studying without moving. ");
         System.out.println();
-
         switch (choice3) {
             case 1:
                 System.out.println("You try to move around and stretch every hour. You feel refreshed and focused.");
@@ -196,7 +176,6 @@ public class StudyScene extends Scene{
                 System.out.println("You keep studying without moving. You feel tired and your eyes are sore. You start to feel stressed out.");
                 break;
         }
-
         System.out.println();
         Input.Continue();        
     }  

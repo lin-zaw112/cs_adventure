@@ -16,6 +16,7 @@ public class Player {
     //region Getters
 
     public String getStressLevel() {
+        
         if (stress == 0) {
             return stress + " (Deadly Calm)";
         } else if (stress > 0 && stress <= 50) {
