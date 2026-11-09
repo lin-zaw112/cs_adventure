@@ -11,7 +11,11 @@ public class Game {
         player.display();
         System.out.println();
         // * Show the intro Scene
-        IntroScene intro = new IntroScene();
-        intro.play(player);
+        // IntroScene intro = new IntroScene();
+        // intro.play(player);
+        EndingScene ending = new EndingScene();
+        ending.play(player);
+            StudyScene study = new StudyScene();
+            study.play(player);
     }
 }
