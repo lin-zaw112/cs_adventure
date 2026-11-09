@@ -65,7 +65,8 @@ public class LunchScene extends Scene{
         Input.Continue();
 
         // Question 1 end
-
+        player.display();
+        System.out.println();
         System.out.println(" B. You look around to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you found a table near a building beside the canteen. Free from all the noise.");
         System.out.println();
         System.out.println("[1] You go to that table. Quietness helps calm your mind.");
@@ -104,13 +105,14 @@ public class LunchScene extends Scene{
 
         System.out.println();
         Input.Continue();
-
+        player.display();
+        System.out.println();
         System.out.println("C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
         System.out.println();
         System.out.println("[1] You refuse politely and prioritize your studies.");
         System.out.println("[2] You refuse rudely and tell them that they should study instead of messing around.");
-        System.out.println("[3] You said “Hell yeah” and agreed to hang out with them.");
-
+        System.out.println("[3] You said \"Hell yeah\" and agreed to hang out with them.");
+        System.out.println();
         int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
@@ -132,8 +134,8 @@ public class LunchScene extends Scene{
         System.out.println();
         System.out.println("[1] You refuse politely and prioritize your studies.");
         System.out.println("[2] You refuse rudely and tell them that they should study instead of messing around.");
-        System.out.println("[3] You said “Hell yeah” and agreed to hang out with them.");
-
+        System.out.println("[3] You said \"Hell yeah\" and agreed to hang out with them.");
+        System.out.println();
         switch(choice3){
             case 1:
             System.out.println("Politely declining your friend's offer allows you to focus peacefully on preparing for tomorrow's exam without drama, reducing your overall stress. Your stress level reduce.");
@@ -149,13 +151,13 @@ public class LunchScene extends Scene{
         }
         System.out.println();
         Input.Continue();
-
-        System.out.println("D. While you’re sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
+        player.display();
+         System.out.println();
+        System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         System.out.println("[1] You fill your water bottle up and drink it.");
         System.out.println("[2] You order double expresso Americano.");
-       
-
+        System.out.println();
         int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
@@ -170,11 +172,11 @@ public class LunchScene extends Scene{
 
         player.display();
         System.out.println();
-        System.out.println("D. While you’re sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
+        System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         System.out.println("[1] You fill your water bottle up and drink it.");
         System.out.println("[2] You order double expresso Americano.");
-
+        System.out.println();
         switch(choice4){
             case 1:
             System.out.println("Refreshed and properly hydrated, your body gets the clean, natural fuel it needs to stay sharp and maintain balanced, steady focus throughout your study session. Your stress level reduce.");

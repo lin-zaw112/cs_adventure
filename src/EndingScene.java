@@ -1,6 +1,6 @@
 public class EndingScene extends Scene {
     public EndingScene() {
-        super("You finally stop studying after a couple hours. Your stomach growls. You look at the time and realize that it’s almost 9pm.  You try to think of something to eat.",
+        super("You finally stop studying after a couple hours. Your stomach growls. You look at the time and realize that it's almost 9pm.  You try to think of something to eat.",
                 "");
     }
 
