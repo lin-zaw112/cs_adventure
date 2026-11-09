@@ -15,5 +15,7 @@ public class Game {
         // intro.play(player);
         EndingScene ending = new EndingScene();
         ending.play(player);
+            StudyScene study = new StudyScene();
+            study.play(player);
     }
 }
