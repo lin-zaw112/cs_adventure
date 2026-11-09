@@ -15,7 +15,7 @@ public class EndingScene extends Scene {
         display();
 
         // Question 1
-        System.out.println("A. You don’t have anything to eat so you open a food delivery app to order some food.");
+        System.out.println("A. You don't have anything to eat so you open a food delivery app to order some food.");
         System.out.println();
         System.out.println("[1] You order chicken rice and a side dish with soup.");
         System.out.println("[2] You order fast food from MacDonal's.");
@@ -40,6 +40,12 @@ public class EndingScene extends Scene {
         player.display();
         System.out.println();
         display();
+        System.out.println("A. You don't have anything to eat so you open a food delivery app to order some food.");
+        System.out.println();
+        System.out.println("[1] You order chicken rice and a side dish with soup.");
+        System.out.println("[2] You order fast food from MacDonal's.");
+        System.out.println("[3] You keep studying without eating.");
+        System.out.println();
 
         switch (choice1) {
             case 1:
@@ -57,8 +63,10 @@ public class EndingScene extends Scene {
         Input.Continue();
 
         // Question 2
+        player.display();
+        System.out.println();
         System.out.println(
-                "B. It’s time to go to bed. You need to rest for tomorrow. You’ve given everything you got today. You deserve your rest.");
+                "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you got today. You deserve your rest.");
         System.out.println();
         System.out.println("[1] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
         System.out.println("[2] You drop everything and just go to bed.");
@@ -68,6 +76,7 @@ public class EndingScene extends Scene {
         int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
 
         Util.clearConsole();
+        
         switch (choice2) {
             case 1:
                 player.changeStress(-15);
@@ -82,7 +91,13 @@ public class EndingScene extends Scene {
 
         player.display();
         System.out.println();
-        display();
+        System.out.println(
+                "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you got today. You deserve your rest.");
+        System.out.println();
+        System.out.println("[1] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
+        System.out.println("[2] You drop everything and just go to bed.");
+        System.out.println("[3] You pull an all-nighter.");
+        System.out.println();
 
         switch (choice2) {
             case 1:
@@ -95,5 +110,7 @@ public class EndingScene extends Scene {
                 System.out.println("You feel so much stress so you keep studying and you fell a sleep on the table.");
                 break;
         }
+        System.out.println();
+        Input.Continue();
     }
 }
