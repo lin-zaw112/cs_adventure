@@ -21,7 +21,7 @@ public class IntroScene extends Scene {
         display();
         int choice = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
-        util.clearConsole();
+        Util.clearConsole();
         switch (choice) {
             case 1 :
                 break;

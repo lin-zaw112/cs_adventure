@@ -7,7 +7,7 @@ public class Game {
 
     public void start() {
         // * Clear the console and display the player's information
-        util.clearConsole();
+        Util.clearConsole();
         player.display();
         System.out.println();
         // * Show the intro Scene

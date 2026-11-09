@@ -7,7 +7,8 @@ public class Main {
 
             // * Set the player's name and generate a random luck value
             player.setName(name);
-            player.changeLuck(util.getRandomNumber(0, 6));
+
+            player.changeLuck(Util.getRandomNumber(0, 6));
 
             // * Create a new Game object and start the game
             Game game = new Game(player);

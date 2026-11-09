@@ -7,7 +7,7 @@ public class Input {
         cc.nextLine();
         // above line is to consume the newline character left in the input buffer
         cc.nextLine();
-        util.clearConsole();
+        Util.clearConsole();
     }
 
     public static String getUserInputStringWithPrompt(String prompt) {
