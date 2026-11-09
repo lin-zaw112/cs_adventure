@@ -8,7 +8,7 @@ public class Player {
     //region Constructors
     public Player() {
         this.name = "KMUTT ANTS";
-        this.stress = 0;
+        this.stress = 50;
         this.luck = 0;
     }
     //endregion
