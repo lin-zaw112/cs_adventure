@@ -3,6 +3,8 @@ public class Player {
     // stress level ranges from 0 to 100, where 0 is no stress and 100 is maximum stress
     private int stress;
     private boolean isWantedToStudy = true;
+    private boolean takeNotes = true;
+
 
     //region Constructors
     public Player() {
@@ -32,6 +34,10 @@ public class Player {
         System.out.println("Stress Level : " + this.getStressLevel());
     }
 
+    public boolean getTakeNotes() {
+        return takeNotes;
+    }
+
     //endregion
 
     //region Setters
@@ -41,6 +47,10 @@ public class Player {
 
     public void changeStress(int amount) {
         stress = Math.clamp(stress + amount, 0, 100);
+    }
+
+    public void setTakeNotes(boolean takeNotes) {
+        this.takeNotes = takeNotes;
     }
 
     //endregion

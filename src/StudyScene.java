@@ -60,8 +60,7 @@ public class StudyScene extends Scene{
         Input.Continue();
         //question2
         //will need a takenotes booelan from calculus Scene
-        boolean takeNotes = false; // This should be set based on the player's previous actions in the game. delete this after the calculus scene is implemented
-        if(takeNotes == true){
+        if(player.getTakeNotes()){
           System.out.println();
         // * Display the scene's title and description
         display();
