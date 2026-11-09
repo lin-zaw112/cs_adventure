@@ -2,14 +2,11 @@ public class Player {
     private String name;
     // stress level ranges from 0 to 100, where 0 is no stress and 100 is maximum stress
     private int stress;
-    // luck level ranges from 0 to 6, where 0 is no luck and 6 is maximum luck
-    private int luck;
 
     //region Constructors
     public Player() {
         this.name = "KMUTT ANTS";
         this.stress = 50;
-        this.luck = 0;
     }
     //endregion
 
@@ -28,22 +25,10 @@ public class Player {
 
     }
 
-    public String getLuckLevel() {
-        if (luck == 0) {
-            return luck + " (No Luck)";
-        } else if (luck > 0 && luck <= 3) {
-            return luck + " (Just a little lucky)";
-        } else if (luck > 3 && luck <= 5) {
-            return luck + " (Moderate)";
-        } else {
-            return luck + " (You are luckest person in the world!)";
-        }
-    }
 
     public void display() {
         System.out.println("Player Name  : " + this.name);
         System.out.println("Stress Level : " + this.getStressLevel());
-        System.out.println("Luck Level   : " + this.getLuckLevel());
     }
 
     //endregion
@@ -55,10 +40,6 @@ public class Player {
 
     public void changeStress(int amount) {
         stress = Math.clamp(stress + amount, 0, 100);
-    }
-
-    public void changeLuck(int amount) {
-        luck = Math.clamp(luck + amount, 0, 6);
     }
 
     //endregion

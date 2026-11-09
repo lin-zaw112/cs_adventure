@@ -30,7 +30,6 @@ public class IntroScene extends Scene {
                 break;
             case 3 :
                 player.changeStress( 5);
-                player.changeLuck(-1);
                 break;
         }
         // * Display the player's updated information and the scene's description
