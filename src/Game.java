@@ -11,11 +11,22 @@ public class Game {
         player.display();
         System.out.println();
         // * Show the intro Scene
-         IntroScene intro = new IntroScene();
-         intro.play(player);
+        IntroScene intro = new IntroScene();
+        CalculusScene calculus = new CalculusScene();
+        LunchScene lunch = new LunchScene();
         EndingScene ending = new EndingScene();
-        ending.play(player);
+
+
+
+        intro.play(player);
+        calculus.play(player);
+        lunch.play(player);
+        if(player.getStudyAfterLunch()){
             StudyScene study = new StudyScene();
             study.play(player);
+        } else {
+            // TODO : Need to implement a scene for Handout Scene
+        }
+        ending.play(player);
     }
 }

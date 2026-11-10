@@ -1,5 +1,5 @@
-public class CalculusClass extends Scene {
-    public CalculusClass() {
+public class CalculusScene extends Scene {
+    public CalculusScene() {
         super("After finally leaving your room, you rush to university, hoping you haven't missed too much of the Calculus lecture.", "");
     }
 

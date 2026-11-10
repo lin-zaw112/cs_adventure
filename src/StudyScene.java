@@ -1,5 +1,3 @@
-
-
 public class StudyScene extends Scene {
     public StudyScene() {
         super("After having Lunch, You choose to study.", "");
@@ -24,15 +22,6 @@ public class StudyScene extends Scene {
         int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
-        
-        switch (choice1) {
-            case 1 :
-                player.changeStress(0);
-                break;
-            case 2 :
-                player.changeStress(0);
-                break;
-        }
         player.display();
         
         System.out.println();
@@ -75,8 +64,6 @@ public class StudyScene extends Scene {
                 player.changeStress(5);
                 break;
         }
-
-
         player.display();
         System.out.println();
         display();

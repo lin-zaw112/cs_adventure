@@ -3,39 +3,28 @@ public class IntroScene extends Scene {
      public IntroScene() {
         super("",
                 "");
-    } 
- 
-    @Override
-    public void display() {
-
-        Util.setTextBold(Util.boldBlue,"""
-    ***********************************************************************
-        The alarm rings sharply. You open your eyes and the first 
-        thing that comes in mind is the final calculus exam for tomorrow. 
-        You get up with dread.
-    ***********************************************************************
-        """);
-      
     }
 
-
+    @Override
+    public void display() {
+        Util.printTextColor(Util.boldLightBlue,"""
+    ***********************************************************************
+        The alarm rings sharply. You open your eyes and the first
+        thing that comes in mind is the final calculus exam for tomorrow.
+        You get up with dread.
+    ***********************************************************************
+    """);
+    }
     @Override
     public void play(Player player) {
-        System.out.println();
         // * Display the scene's title and description
         display();
-        
-        try{
-            Thread.sleep(3000);
-        }catch(Exception e){
-            System.out.println("Sorry some error. We'll fix it immediately.");
-        }
-
-
-        displayQ("You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
-                "1. Reply that you will share the notes later.\n" +
-                "2. Ignore it and keep your mind calm.\n" +
-                "3. Starts to panic with them and increase your blood pressure.");
+        Util.displayQ(
+                "You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
+                "1. Reply that you will share the notes later.",
+                "2. Ignore it and keep your mind calm.",
+                "3. Starts to panic with them and increase your blood pressure."
+        );
 
         int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
@@ -44,10 +33,8 @@ public class IntroScene extends Scene {
             case 1 :
                 player.changeStress(-5);
                 break;
-
             case 2 :
                 break;
-                
             case 3 :
                 player.changeStress( 5);
                 break;
@@ -56,22 +43,19 @@ public class IntroScene extends Scene {
         player.display();
         System.out.println();
         display();
-
-displayQ("You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
-                "1. Reply that you will share the notes later.\n" +
-                "2. Ignore it and keep your mind calm.\n" +
-                "3. Starts to panic with them and increase your blood pressure.");
-
-
+        Util.displayQ(
+                "You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
+                "1. Reply that you will share the notes later.",
+                "2. Ignore it and keep your mind calm.",
+                "3. Starts to panic with them and increase your blood pressure."
+        );
         switch (choice1) {
             case 1:
-                System.out.println("""
-                After replying to your classmates, you put your phone aside, and head to the bathroom and clean yourself.
-                Your Stress level reduce a litte bit.""");
+                Util.displayAns("After replying to your classmates, you put your phone aside, and head to the bathroom and clean yourself. Your Stress level reduce a little bit.");
                 break;
             case 2:
                 System.out.println("""
-                You decide not to get distracted by the group chat and remain calm about tomorrow's exam. 
+                You decide not to get distracted by the group chat and remain calm about tomorrow's exam.
                 Your stress level remains unchanged.
                 """);
                 break;
@@ -83,7 +67,7 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
                 break;
         }
         // * Prompt the player to continue to the next scene
-        
+
         System.out.println();
         Input.Continue();
 
@@ -105,7 +89,7 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
                 player.changeStress(-5);
                 break;
             case 2 :
-             
+
                player.changeStress(3);
 
                 break;
@@ -136,7 +120,7 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
                 break;
         }
         // * Prompt the player to continue to the next scene
-        
+
         System.out.println();
         Input.Continue();
 
@@ -187,7 +171,7 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
                 break;
         }
         // * Prompt the player to continue to the next scene
-        
+
         System.out.println();
         Input.Continue();
 
@@ -215,7 +199,7 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
         // * Display the player's updated information and the scene's description
         player.display();
         System.out.println();
-        
+
         displayQ("You finished preparing everything to go to class.",
                 "1. Take a deep breath and walk calmly outside.\n" +
                 "2. You check your bag three times to check the necessity.\n");
@@ -228,10 +212,10 @@ displayQ("You saw some notifications on your phone. It is your class group chat 
             case 2:
                 System.out.println("After finally leaving your room, you rush to university, hoping you haven't missed too much of the Calculus lecture. But still you are late for class, so Your stress level increases.");
                 break;
-          
+
         }
         // * Prompt the player to continue to the next scene
-        
+
         System.out.println();
         Input.Continue();
 

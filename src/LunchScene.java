@@ -1,6 +1,6 @@
 public class LunchScene extends Scene{
     public LunchScene() {
-        super( "You and your friends arrive at the school canteen which is filled with studnets. You are really tired from the class, and you need to refuel yourself","");
+        super( "You and your friends arrive at the school canteen which is filled with students. You are really tired from the class, and you need to refuel yourself","");
     }
 
     @Override
@@ -13,13 +13,12 @@ public class LunchScene extends Scene{
     @Override
     public void play(Player player) {
         System.out.println();
-
         display();
         // First Question 
-        System.out.println("A. You look around and find something to eat. There is so much varitey of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
+        System.out.println("A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
         System.out.println();
         System.out.println("[1] You choose a warm and filling food that has vegetables, crabs, and protein.");
-        System.out.println("[2] You choose a buger set that contains coke, fries, and burgers.");
+        System.out.println("[2] You choose a burger set that contains coke, fries, and burgers.");
         System.out.println("[3] You eat nothing and keep cramming while your friends are having lunch.");
         System.out.println();
         // Ask user for input 
@@ -41,10 +40,10 @@ public class LunchScene extends Scene{
         player.display();
         System.out.println();
         display();
-        System.out.println("A. You look around and find something to eat. There is so much varitey of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
+        System.out.println("A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
         System.out.println();
         System.out.println("[1] You choose a warm and filling food that has vegetables, crabs, and protein.");
-        System.out.println("[2] You choose a buger set that contains coke, fries, and burgers.");
+        System.out.println("[2] You choose a burger set that contains coke, fries, and burgers.");
         System.out.println("[3] You eat nothing and keep cramming while your friends are having lunch.");
         System.out.println();
 
@@ -70,7 +69,7 @@ public class LunchScene extends Scene{
         System.out.println(" B. You look around to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you found a table near a building beside the canteen. Free from all the noise.");
         System.out.println();
         System.out.println("[1] You go to that table. Quietness helps calm your mind.");
-        System.out.println("[2] You sit with your freinds in the loud canteen.");
+        System.out.println("[2] You sit with your friends in the loud canteen.");
         System.out.println();
 
         int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
@@ -92,7 +91,7 @@ public class LunchScene extends Scene{
         System.out.println(" B. You look around to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you found a table near a building beside the canteen. Free from all the noise.");
         System.out.println();
         System.out.println("[1] You go to that table. Quietness helps calm your mind.");
-        System.out.println("[2] You sit with your freinds in the loud canteen.");
+        System.out.println("[2] You sit with your friends in the loud canteen.");
         System.out.println();
         
         switch (choice2) {
@@ -128,6 +127,7 @@ public class LunchScene extends Scene{
                 break;
             case 3 :
                 player.changeStress( 5);
+                player.setStudyAfterLunch(false);
                 break;
         }
 
@@ -159,7 +159,7 @@ public class LunchScene extends Scene{
         System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         System.out.println("[1] You fill your water bottle up and drink it.");
-        System.out.println("[2] You order double expresso Americano.");
+        System.out.println("[2] You order double espresso Americano.");
         System.out.println();
         int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
@@ -179,7 +179,7 @@ public class LunchScene extends Scene{
         System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         System.out.println("[1] You fill your water bottle up and drink it.");
-        System.out.println("[2] You order double expresso Americano.");
+        System.out.println("[2] You order double espresso Americano.");
         System.out.println();
         switch(choice4){
             case 1:

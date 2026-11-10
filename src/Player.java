@@ -1,8 +1,10 @@
+import java.util.Locale;
+
 public class Player {
     private String name;
     // stress level ranges from 0 to 100, where 0 is no stress and 100 is maximum stress
     private int stress;
-    private boolean isWantedToStudy = true;
+    private boolean studyAfterLunch = true;
     private boolean takeNotes = true;
 
 
@@ -31,12 +33,26 @@ public class Player {
 
 
     public void display() {
-        System.out.println("Player Name  : " + this.name);
-        System.out.println("Stress Level : " + this.getStressLevel());
+        System.out.print("Name  : ");
+        Util.printTextColor(Util.shinyYellow, this.name.toUpperCase());
+        if(this.stress <= 50){
+            System.out.print("Stress: " );
+            Util.printTextColor(Util.green,  getStressLevel());
+        } else if(this.stress <= 80){
+            System.out.print("Stress: ");
+            Util.printTextColor(Util.blue, getStressLevel());
+        } else {
+            System.out.print("Stress: ");
+            Util.printTextColor(Util.boldRed, getStressLevel());
+        }
     }
 
     public boolean getTakeNotes() {
         return takeNotes;
+    }
+
+    public  boolean getStudyAfterLunch() {
+        return studyAfterLunch;
     }
 
     //endregion
@@ -54,6 +70,9 @@ public class Player {
         this.takeNotes = takeNotes;
     }
 
+    public void setStudyAfterLunch(boolean studyAfterLunch) {
+        this.studyAfterLunch = studyAfterLunch;
+    }
     //endregion
 
 }
