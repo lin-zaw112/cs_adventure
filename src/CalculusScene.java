@@ -111,7 +111,7 @@ public class CalculusScene extends Scene {
                     """
                             Your friend who is sitting next to you asks you some questions about the class topic. What do you do?
                             """,
-                    "[1] You try your best to explain the calculus concepts step by step. As you explain the questions, you also improve your own understanding of the topic. Your stress decreases by 5.",
+                    "[1] You explain all the questions in the process of making the topic more familiar.",
                     "[2] Ignore him and pretend that you don't hear him.",
                     "[3] You tell him that you are as lost as him."
             );
@@ -136,7 +136,7 @@ public class CalculusScene extends Scene {
                     """
                             Your friend who is sitting next to you asks you some questions about the class topic. What do you do?
                             """,
-                    "[1] You try your best to explain the calculus concepts step by step. As you explain the questions, you also improve your own understanding of the topic. Your stress decreases by 5.",
+                    "[1] You explain all the questions in the process of making the topic more familiar.",
                     "[2] Ignore him and pretend that you don't hear him.",
                     "[3] You tell him that you are as lost as him."
             );
