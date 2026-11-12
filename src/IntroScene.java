@@ -12,7 +12,7 @@ public class IntroScene extends Scene {
         System.out.println();
         Util.printTextColor(Util.boldLightBlue, getDescription());
         System.out.println();
-        Util.printTextColor(Util.boldLightBlue, "=============================== Let's get ready for the exam! ==============================");
+        Util.printTextColor(Util.boldLightBlue, "============================== Let's get ready for the exam! ===============================");
     }
     @Override
     public void play(Player player) {

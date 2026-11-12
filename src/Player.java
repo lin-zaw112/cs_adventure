@@ -4,6 +4,7 @@ public class Player {
     private int stress;
     private boolean studyAfterLunch = true;
     private boolean takeNotes = true;
+    private boolean isAlive = true;
 
 
     //region Constructors
@@ -30,6 +31,13 @@ public class Player {
 
     public int getStress() {
         return this.stress;
+    }
+
+    public boolean isAlive() {
+        if(this.stress >= 90) {
+            this.isAlive = false;
+        }
+        return this.isAlive;
     }
 
 

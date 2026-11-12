@@ -13,21 +13,28 @@ public class Game {
         CalculusScene calculus = new CalculusScene();
         LunchScene lunch = new LunchScene();
         EndingScene ending = new EndingScene();
-        HangOutScene hangOut = new HangOutScene();
         Final finalScene = new Final();
+        while (player.isAlive()) {
 
-
-
-        intro.play(player);
-        calculus.play(player);
-        lunch.play(player);
-        if(player.getStudyAfterLunch()){
-            StudyScene study = new StudyScene();
-            study.play(player);
-        } else {
-            hangOut.play(player);
+            intro.play(player);
+            if(player.isAlive()) break;
+            calculus.play(player);
+            if(player.isAlive()) break;
+            lunch.play(player);
+            if(player.isAlive()) break;
+            if(player.getStudyAfterLunch()){
+                StudyScene study = new StudyScene();
+                study.play(player);
+                if(player.isAlive()) break;
+            } else {
+                HangOutScene hangOut = new HangOutScene();
+                hangOut.play(player);
+                if(player.isAlive()) break;
+            }
+            ending.play(player);
         }
-        ending.play(player);
-        finalScene.play(player);
+    finalScene.play(player);
+
+
     }
 }
