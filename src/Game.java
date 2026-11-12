@@ -14,6 +14,7 @@ public class Game {
         LunchScene lunch = new LunchScene();
         EndingScene ending = new EndingScene();
         HangOutScene hangOut = new HangOutScene();
+        Final finalScene = new Final();
 
 
 
@@ -27,5 +28,6 @@ public class Game {
             hangOut.play(player);
         }
         ending.play(player);
+        finalScene.play(player);
     }
 }

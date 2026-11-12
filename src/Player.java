@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Player {
     private String name;
     // stress level ranges from 0 to 100, where 0 is no stress and 100 is maximum stress
@@ -28,7 +26,10 @@ public class Player {
         } else {
             return stress + " ( You are stressed out!)";
         }
+    }
 
+    public int getStress() {
+        return this.stress;
     }
 
 

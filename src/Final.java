@@ -1,0 +1,60 @@
+public class Final extends Scene {
+
+    public Final() {
+        super("The Final Verdict", "Your long and exhausting day finally comes to an end. The night eventually passes, and a new day begins. You wake up and head to take your Calculus exam. A few days go by, and the exam results are finally announced. It's time to face the consequences of your choices.");
+    }
+
+    @Override
+    public void display() {
+        Util.printTextColor(Util.boldLightBlue, getTitle());
+        System.out.println();
+        Util.printTextColor(Util.boldLightBlue, getDescription());
+        System.out.println();
+        Util.printTextColor(Util.boldLightBlue, "=============================== The Final Verdict ===============================");
+        System.out.println();
+    }
+
+    @Override
+    public void play(Player player) {
+        player.display();
+        System.out.println();
+        
+        if (player.getStress() == 0) {
+            Util.printTextColor(Util.boldLightBlue, "=============================== The Ascension to Godhood ===============================");
+            Util.displayAns("Suddenly, it feels like the world has gone quiet. \r\n" + //
+                                "\r\n" + //
+                                "The heavy burdens on your shoulders disappear. You are no longer a human being anymore. \r\n" + //
+                                "\r\n" + //
+                                "You have ascended. YOU REACH GODHOOD!!!");
+        } else if (player.getStress() <= 40) {
+            Util.printTextColor(Util.boldLightBlue, "=============================== The Light at the End ===============================");
+            Util.displayAns("The exam results are finally announced. You nervously check your results.\r\n" + //
+                                "\r\n" + //
+                                "CONGRATULATIONS! YOU PASSED! \r\n" + //
+                                "\r\n" + //
+                                "All your hard work and sleepless nights have finally paid off. \r\n" + //
+                                "\r\n" + //
+                                "You smile with relief, knowing that you made it through.");
+        } else if (player.getStress() <= 89) {
+            Util.printTextColor(Util.boldLightBlue, "=============================== The Price of Procrastination ===============================");
+            Util.displayAns("The exam results are announced. \r\n" + //
+                                "\r\n" + //
+                                "You search for your student ID, only to discover that you didn't pass.\r\n" + //
+                                "\r\n" + //
+                                "YOU FAILED. You feel disappointed, wondering what went wrong. \r\n" + //
+                                "\r\n" + //
+                                "Perhaps things could have been different if you had managed your time and stress better. \r\n" + //
+                                "\r\n" + //
+                                "It's not the end. You can always try again.");
+        } else {
+            Util.printTextColor(Util.boldLightBlue, "=============================== The Breaking Point ===============================");
+            Util.displayAns("After pushing yourself too hard, you suddenly feel dizzy and collapse. \r\n" + //
+                                "\r\n" + //
+                                "You wake up in a hospital bed. The doctor explains that exhaustion and stress have taken a toll on your body. \r\n" + //
+                                "\r\n" + //
+                                "You check your phone. The exam is already over. \r\n" + //
+                                "\r\n" + //
+                                "GAME OVER: Health comes first!");
+        }
+    }
+}

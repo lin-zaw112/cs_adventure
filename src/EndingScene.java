@@ -18,7 +18,7 @@ public class EndingScene extends Scene {
         System.out.println("A. You don't have anything to eat so you open a food delivery app to order some food.");
         System.out.println();
         System.out.println("[1] You order chicken rice and a side dish with soup.");
-        System.out.println("[2] You order fast food from MacDonal's.");
+        System.out.println("[2] You order fast food from MacDonald's.");
         System.out.println("[3] You keep studying without eating.");
         System.out.println();
 
