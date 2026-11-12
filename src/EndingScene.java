@@ -22,7 +22,7 @@ public class EndingScene extends Scene {
         System.out.println("[3] You keep studying without eating.");
         System.out.println();
 
-        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
 
         Util.clearConsole();
         switch (choice1) {
@@ -73,7 +73,7 @@ public class EndingScene extends Scene {
         System.out.println("[3] You pull an all-nighter.");
         System.out.println();
 
-        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
 
         Util.clearConsole();
         

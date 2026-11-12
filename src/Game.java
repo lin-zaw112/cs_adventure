@@ -8,8 +8,6 @@ public class Game {
     public void start() {
         // * Clear the console and display the player's information
         Util.clearConsole();
-        player.display();
-        System.out.println();
         // * Show the intro Scene
         IntroScene intro = new IntroScene();
         CalculusScene calculus = new CalculusScene();

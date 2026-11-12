@@ -22,7 +22,7 @@ public class LunchScene extends Scene{
         System.out.println("[3] You eat nothing and keep cramming while your friends are having lunch.");
         System.out.println();
         // Ask user for input 
-        int choice = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice) {
@@ -72,7 +72,7 @@ public class LunchScene extends Scene{
         System.out.println("[2] You sit with your friends in the loud canteen.");
         System.out.println();
 
-        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
 
@@ -114,7 +114,7 @@ public class LunchScene extends Scene{
         System.out.println("[2] You refuse rudely and tell them that they should study instead of messing around.");
         System.out.println("[3] You said \"Hell yeah\" and agreed to hang out with them.");
         System.out.println();
-        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
 
@@ -161,7 +161,7 @@ public class LunchScene extends Scene{
         System.out.println("[1] You fill your water bottle up and drink it.");
         System.out.println("[2] You order double espresso Americano.");
         System.out.println();
-        int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
 

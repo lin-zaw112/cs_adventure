@@ -8,13 +8,12 @@ public abstract class Scene {
     }
 
     public String getTitle() {
-        return title;
+        return "=============================== " + title + " ==============================";
     }
 
     public String getDescription() {
         return description;
     }
-
     public abstract void display();
     public abstract void play(Player player);
 }

@@ -1,32 +1,36 @@
 public class IntroScene extends Scene {
 
      public IntroScene() {
-        super("",
-                "");
+        super("Welcome to the Adventure Game!",
+                "You open your eyes and the first thing that comes in mind\n" +
+                        "is the final calculus exam for tomorrow.");
     }
 
     @Override
     public void display() {
-        Util.printTextColor(Util.boldLightBlue,"""
-    ***********************************************************************
-        The alarm rings sharply. You open your eyes and the first
-        thing that comes in mind is the final calculus exam for tomorrow.
-        You get up with dread.
-    ***********************************************************************
-    """);
+        Util.printTextColor(Util.boldLightBlue, getTitle());
+        System.out.println();
+        Util.printTextColor(Util.boldLightBlue, getDescription());
+        System.out.println();
+        Util.printTextColor(Util.boldLightBlue, "=============================== Let's get ready for the exam! ==============================");
     }
     @Override
     public void play(Player player) {
         // * Display the scene's title and description
         display();
+        player.display();
+        System.out.println();
         Util.displayQ(
-                "You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
-                "1. Reply that you will share the notes later.",
-                "2. Ignore it and keep your mind calm.",
-                "3. Starts to panic with them and increase your blood pressure."
+                """
+                        You saw some notifications on your phone. It is your group chat blowing up with messages,
+                        asking for notes and losing their minds
+                        """,
+                "[1] Reply that you will share the notes later.",
+                "[2] Ignore it and keep your mind calm.",
+                "[3] Starts to panic with them and increase your blood pressure."
         );
 
-        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice1) {
@@ -40,15 +44,19 @@ public class IntroScene extends Scene {
                 break;
         }
         // * Display the player's updated information and the scene's description
+        display();
         player.display();
         System.out.println();
-        display();
         Util.displayQ(
-                "You saw some notifications on your phone. It is your class group chat blowing up with stress, asking for notes and losing their minds",
-                "1. Reply that you will share the notes later.",
-                "2. Ignore it and keep your mind calm.",
-                "3. Starts to panic with them and increase your blood pressure."
+                """
+                        You saw some notifications on your phone. It is your group chat blowing up with messages,
+                        asking for notes and losing their minds
+                        """,
+                "[1] Reply that you will share the notes later.",
+                "[2] Ignore it and keep your mind calm.",
+                "[3] Starts to panic with them and increase your blood pressure."
         );
+
         switch (choice1) {
             case 1:
                 Util.displayAns("After replying to your classmates, you put your phone aside, and head to the bathroom and clean yourself. Your Stress level reduce a little bit.");
@@ -57,7 +65,7 @@ public class IntroScene extends Scene {
                 Util.displayAns("You decide not to get distracted by the group chat and remain calm about tomorrow's exam.Your stress level remains unchanged.");
                 break;
             case 3:
-                Util.displayAns("Seeing your classmates panic makes you anxious. You begin doubting your preparation andworrying about tomorrow's exam. So Your stress start to Increase.");
+                Util.displayAns("Seeing your classmates panic makes you anxious. You begin doubting your preparation and worrying about tomorrow's exam. So Your stress start to Increase.");
                 break;
         }
         // * Prompt the player to continue to the next scene
@@ -66,16 +74,17 @@ public class IntroScene extends Scene {
         Input.Continue();
 
         //! first question end
-
-        System.out.println();
+        player.display();
         // * Display the scene's title and description
+        Util.displayQ("""
+                        You are hungry. You look around the kitchen to find something to eat.
+                        You found eggs, coffee and left over rice from last night.
+                        """,
+                "[1] You make egg fried rice and coffee.",
+                "[2] You drink coffee on an empty stomach",
+                "[3] You eat nothing to save time.");
 
-        Util.displayQ("You are hungry. You look around the kitchen to find something to eat. You found eggs, coffee and left over rice from last night.",
-                "1. You make egg fried rice and coffee.",
-                "2. You drink coffee on an empty stomach",
-                "3. You eat nothing to save time.");
-
-        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice2) {
@@ -93,14 +102,14 @@ public class IntroScene extends Scene {
         }
         // * Display the player's updated information and the scene's description
         player.display();
-        System.out.println();
-
-      Util.displayQ("You are hungry. You look around the kitchen to find something to eat. You found eggs, coffee and left over rice from last night.",
-                "1. You make egg fried rice and coffee.",
-                "2. You drink coffee on an empty stomach.",
-                "3. You eat nothing to save time.");
-
-
+        // * Display the scene's title and description
+        Util.displayQ("""
+                        You are hungry. You look around the kitchen to find something to eat.
+                        You found eggs, coffee and left over rice from last night.
+                        """,
+                "[1] You make egg fried rice and coffee.",
+                "[2] You drink coffee on an empty stomach",
+                "[3] You eat nothing to save time.");
 
         switch (choice2) {
             case 1:
@@ -120,15 +129,15 @@ public class IntroScene extends Scene {
 
         //! second Question end
 
-        System.out.println();
+        player.display();
         // * Display the scene's title and description
 
         Util.displayQ("You are still in your PJs. You open your wardrobe and find some clothes to change. ",
-                "1. Put on a comfortable T-shirt and a pair of jeans.",
-                "2. Put on whatever you see first.",
-                "3. Spend 10 minutes trying to wear the best outfit.");
+                "[1] Put on a comfortable T-shirt and a pair of jeans.",
+                "[2] Put on whatever you see first.",
+                "[3] Spend 10 minutes trying to wear the best outfit.");
 
-        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice3) {
@@ -144,15 +153,11 @@ public class IntroScene extends Scene {
 
         // * Display the player's updated information and the scene's description
         player.display();
-        System.out.println();
 
         Util.displayQ("You are still in your PJs. You open your wardrobe and find some clothes to change. ",
-                "1. Put on a comfortable T-shirt and a pair of jeans.",
-                "2. Put on whatever you see first.",
-                "3. Spend 10 minutes trying to wear the best outfit.");
-
-
-
+                "[1] Put on a comfortable T-shirt and a pair of jeans.",
+                "[2] Put on whatever you see first.",
+                "[3] Spend 10 minutes trying to wear the best outfit.");
         switch (choice3) {
             case 1:
                 Util.displayAns("After getting dressed, you grab your bag and prepare to leave for class. Before stepping outside, you make sure everything is ready.Your Stress level reduces.");
@@ -171,33 +176,29 @@ public class IntroScene extends Scene {
 
         //! third Question end
 
-        System.out.println();
+        player.display();
         // * Display the scene's title and description
 
         Util.displayQ("You finished preparing everything to go to class.",
-                "1. Take a deep breath and walk calmly outside.",
-                "2. You check your bag three times to check the necessity.");
+                "[1] Take a deep breath and walk calmly outside.",
+                "[2] You check your bag three times to check the necessity.");
 
-        int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice4) {
             case 1 :
                 break;
             case 2 :
-
-            player.changeStress(3);
-
+                player.changeStress(3);
                 break;
         }
         // * Display the player's updated information and the scene's description
         player.display();
-        System.out.println();
 
         Util.displayQ("You finished preparing everything to go to class.",
-                "1. Take a deep breath and walk calmly outside.",
-                "2. You check your bag three times to check the necessity.");
-
+                "[1] Take a deep breath and walk calmly outside.",
+                "[2] You check your bag three times to check the necessity.");
 
         switch (choice4) {
             case 1:
@@ -213,16 +214,6 @@ public class IntroScene extends Scene {
         System.out.println();
         Input.Continue();
 
-    }//play method end
-
-
-
-    public void displayQ(String title,String Q){
-
-        System.out.println(title);
-        System.out.println();
-        System.out.println(Q);
-        System.out.println();
     }
 }
 

@@ -19,7 +19,7 @@ public class StudyScene extends Scene {
         System.out.println("[1] You choose the library.");
         System.out.println("[2] You choose to go home.");
         System.out.println();
-        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         player.display();
@@ -52,7 +52,7 @@ public class StudyScene extends Scene {
         System.out.println("[1] You start practicing questions and only look at the notes when necessary");
         System.out.println("[2] You look at the notes from page one to the end. ");
         System.out.println();
-        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
 
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
@@ -93,7 +93,7 @@ public class StudyScene extends Scene {
         System.out.println("[2] Start panicking and run around the place frantically. ");
         System.out.println("[3] You just accept your fate. ");
         System.out.println();
-        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3): ", 1, 3);
+        int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice2) {
@@ -136,7 +136,7 @@ public class StudyScene extends Scene {
         System.out.println("[1] You try to move around and stretch every hour.");
         System.out.println("[2] You keep studying without moving. ");
         System.out.println();
-        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-2): ", 1, 2);
+        int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
         // * Clear the console and update the player's stress and luck based on their choice
         Util.clearConsole();
         switch (choice3) {
