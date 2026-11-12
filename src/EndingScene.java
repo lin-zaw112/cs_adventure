@@ -1,35 +1,36 @@
 public class EndingScene extends Scene {
     public EndingScene() {
-        super("You finally stop studying after a couple hours. Your stomach growls. You look at the time and realize that it's almost 9pm.  You try to think of something to eat.",
+        super("You finally stop studying after a couple of hours. Your stomach growls. You look at the time and realize that it's almost 9 p.m. You try to think of something to eat.",
                 "");
     }
 
     @Override
     public void display() {
-        System.out.println(getTitle());
+        Util.printTextColor(Util.boldLightBlue, getTitle());
         System.out.println();
     }
 
     @Override
     public void play(Player player) {
         display();
+        player.display();
 
         // Question 1
-        System.out.println("A. You don't have anything to eat so you open a food delivery app to order some food.");
+        Util.printTextColor(Util.boldBlue, "A. You don't have anything to eat so you open a food delivery app to order some food.");
         System.out.println();
-        System.out.println("[1] You order chicken rice and a side dish with soup.");
-        System.out.println("[2] You order fast food from MacDonald's.");
-        System.out.println("[3] You keep studying without eating.");
+        Util.printTextColor(Util.boldGreen, "[1] You order fast food from McDonald's.");
+        Util.printTextColor(Util.boldGreen, "[2] You order chicken rice and a side dish with soup.");
+        Util.printTextColor(Util.boldGreen, "[3] You keep studying without eating.");
         System.out.println();
 
         int choice1 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
 
         Util.clearConsole();
         switch (choice1) {
-            case 1:
+            case 2:
                 player.changeStress(-10);
                 break;
-            case 2:
+            case 1:
                 player.changeStress(+5);
                 break;
             case 3:
@@ -37,25 +38,25 @@ public class EndingScene extends Scene {
                 break;
         }
 
+        display();
         player.display();
         System.out.println();
-        display();
-        System.out.println("A. You don't have anything to eat so you open a food delivery app to order some food.");
+        Util.printTextColor(Util.boldBlue, "A. You don't have anything to eat so you open a food delivery app to order some food.");
         System.out.println();
-        System.out.println("[1] You order chicken rice and a side dish with soup.");
-        System.out.println("[2] You order fast food from MacDonal's.");
-        System.out.println("[3] You keep studying without eating.");
+        Util.printTextColor(Util.boldGreen, "[1] You order fast food from McDonald's.");
+        Util.printTextColor(Util.boldGreen, "[2] You order chicken rice and a side dish with soup.");
+        Util.printTextColor(Util.boldGreen, "[3] You keep studying without eating.");
         System.out.println();
 
         switch (choice1) {
-            case 1:
-                System.out.println("You feel energize with healthy food and ready for another study session.");
-                break;
             case 2:
-                System.out.println("You feel a little bit sluggish but you study anyway.");
+                Util.displayAns("You feel energized with healthy food and ready for another study session.");
+                break;
+            case 1:
+                Util.displayAns("You feel a little bit sluggish but you study anyway.");
                 break;
             case 3:
-                System.out.println("Your stormach is making a lot of noise but you ignore it and keep on studying.");
+                Util.displayAns("Your stomach is making a lot of noise but you ignore it and keep on studying.");
                 break;
         }
 
@@ -65,12 +66,11 @@ public class EndingScene extends Scene {
         // Question 2
         player.display();
         System.out.println();
-        System.out.println(
-                "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you got today. You deserve your rest.");
+        Util.printTextColor(Util.boldBlue, "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you have today. You deserve your rest.");
         System.out.println();
-        System.out.println("[1] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
-        System.out.println("[2] You drop everything and just go to bed.");
-        System.out.println("[3] You pull an all-nighter.");
+        Util.printTextColor(Util.boldGreen, "[1] You drop everything and just go to bed.");
+        Util.printTextColor(Util.boldGreen, "[2] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
+        Util.printTextColor(Util.boldGreen, "[3] You pull an all-nighter.");
         System.out.println();
 
         int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
@@ -78,10 +78,10 @@ public class EndingScene extends Scene {
         Util.clearConsole();
         
         switch (choice2) {
-            case 1:
+            case 2:
                 player.changeStress(-15);
                 break;
-            case 2:
+            case 1:
                 player.changeStress(+1);
                 break;
             case 3:
@@ -91,23 +91,22 @@ public class EndingScene extends Scene {
 
         player.display();
         System.out.println();
-        System.out.println(
-                "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you got today. You deserve your rest.");
+        Util.printTextColor(Util.boldBlue, "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you have today. You deserve your rest.");
         System.out.println();
-        System.out.println("[1] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
-        System.out.println("[2] You drop everything and just go to bed.");
-        System.out.println("[3] You pull an all-nighter.");
+        Util.printTextColor(Util.boldGreen, "[1] You drop everything and just go to bed.");
+        Util.printTextColor(Util.boldGreen, "[2] You wash your face and brush your teeth. You meditate for a bit and go to bed.");
+        Util.printTextColor(Util.boldGreen, "[3] You pull an all-nighter.");
         System.out.println();
 
         switch (choice2) {
-            case 1:
-                System.out.println("You feel refresh and calm. You get under the blanket and sleep away.");
-                break;
             case 2:
-                System.out.println("You feel a little bit dirty but you still sleep anyway.");
+                Util.displayAns("You feel refreshed and calm.\nYou get under the blanket and drift off to sleep.");
+                break;
+            case 1:
+                Util.displayAns("You feel a little bit dirty but you still sleep anyway.");
                 break;
             case 3:
-                System.out.println("You feel so much stress so you keep studying and you fell a sleep on the table.");
+                Util.displayAns("You feel so stressed that you keep studying until you fall asleep at the table.");
                 break;
         }
         System.out.println();

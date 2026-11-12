@@ -21,11 +21,11 @@ public class Player {
         if (stress == 0) {
             return stress + " (Deadly Calm)";
         } else if (stress > 0 && stress <= 50) {
-            return stress + " (just a little stressed)";
+            return stress + " (A little stressed)";
         } else if (stress > 50 && stress <= 80) {
             return stress + " (Moderate)";
         } else {
-            return stress + " ( You are stressed out!)";
+            return stress + " (You are stressed out!)";
         }
     }
 
@@ -67,6 +67,13 @@ public class Player {
     //endregion
 
     //region Setters
+
+    public void reset() {
+        this.stress = 50;
+        this.studyAfterLunch = true;
+        this.takeNotes = true;
+        this.isAlive = true;
+    }
     public void setName(String name) {
         this.name = name;
     }

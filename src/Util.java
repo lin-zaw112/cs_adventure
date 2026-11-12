@@ -56,15 +56,6 @@ public class Util {
     }
 
     public static void displayAns(String answer) {
-        for (int i = 0; i < answer.length(); i++) {
-            System.out.print(Util.shinyYellow + answer.charAt(i) + "\u001B[0m");
-            System.out.flush();
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException e) {
-              System.out.println("Error: " + e.getMessage());
-            }
-        }
-        System.out.println();
+        Util.printTextColor(Util.shinyYellow, answer);
     }
 }

@@ -1,11 +1,11 @@
 public class LunchScene extends Scene{
     public LunchScene() {
-        super( "You and your friends arrive at the school canteen which is filled with students. You are really tired from the class, and you need to refuel yourself","");
+        super( "You and your friends arrive at the school canteen which is filled with students. You are really tired from the class, and you need to refuel.","");
     }
 
     @Override
     public void display() {
-        System.out.println(getTitle());
+        Util.printTextColor(Util.boldLightBlue, getTitle());
         System.out.println();
     
     }
@@ -14,16 +14,17 @@ public class LunchScene extends Scene{
     public void play(Player player) {
         System.out.println();
         display();
+        player.display();
         // First Question 
-        System.out.println("A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
+        Util.printTextColor(Util.boldBlue, "A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Make the wrong choice, and you won't be able to focus on studying. ");
         System.out.println();
-        System.out.println("[1] You choose a warm and filling food that has vegetables, crabs, and protein.");
-        System.out.println("[2] You choose a burger set that contains coke, fries, and burgers.");
-        System.out.println("[3] You eat nothing and keep cramming while your friends are having lunch.");
+        Util.printTextColor(Util.boldGreen, "[1] You choose a warm, filling meal with vegetables, carbs, and protein.");
+        Util.printTextColor(Util.boldGreen, "[2] You choose a burger set that includes a Coke, fries, and a burger.");
+        Util.printTextColor(Util.boldGreen, "[3] You eat nothing and keep cramming while your friends are having lunch.");
         System.out.println();
         // Ask user for input 
         int choice = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
-        // * Clear the console and update the player's stress and luck based on their choice
+        // * Clear the console and update the player's stress based on their choice
         Util.clearConsole();
         switch (choice) {
             case 1 :
@@ -37,27 +38,27 @@ public class LunchScene extends Scene{
                 break;
         }
 
+        display();
         player.display();
         System.out.println();
-        display();
-        System.out.println("A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Wrong choice and you won't be able to focus on studying. ");
+        Util.printTextColor(Util.boldBlue, "A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Make the wrong choice, and you won't be able to focus on studying. ");
         System.out.println();
-        System.out.println("[1] You choose a warm and filling food that has vegetables, crabs, and protein.");
-        System.out.println("[2] You choose a burger set that contains coke, fries, and burgers.");
-        System.out.println("[3] You eat nothing and keep cramming while your friends are having lunch.");
+        Util.printTextColor(Util.boldGreen, "[1] You choose a warm, filling meal with vegetables, carbs, and protein.");
+        Util.printTextColor(Util.boldGreen, "[2] You choose a burger set that includes a Coke, fries, and a burger.");
+        Util.printTextColor(Util.boldGreen, "[3] You eat nothing and keep cramming while your friends are having lunch.");
         System.out.println();
 
         switch(choice) {
             case 1:
-            System.out.println("This is a balanced, nutritious meal. The combination of protein, vegetables, and wholesome ingredients gives your brain steady energy without causing a sugar crash or sluggishness, allowing you to focus effectively on your studying. Your stress level reduce.");
+            Util.displayAns("This is a balanced, nutritious meal.\nThe combination of protein, vegetables, and wholesome ingredients gives your brain steady energy without causing a sugar crash or sluggishness, allowing you to focus effectively on your studying.\nYour stress level decreases.");
             break;
 
             case 2:
-            System.out.println("Fast food high in refined carbs, sugar, and saturated fats can lead to a post-meal energy crash and grogginess. You will likely feel too sluggish or bloated to concentrate properly on your studying. Your stress level increase.");
+            Util.displayAns("Fast food high in refined carbs, sugar, and saturated fats can lead to a post-meal energy crash and grogginess.\nYou will likely feel too sluggish or bloated to concentrate properly on your studying.\nYour stress level increases.");
             break;
 
             case 3:
-            System.out.println("Skipping a meal entirely leaves your brain starved of necessary fuel and glucose. While you might save time initially, hunger and mental fatigue will soon set in, making it very difficult to retain information or focus on your studying. Your stress level reduce");
+            Util.displayAns("Skipping a meal leaves you hungry and makes it harder to focus.\nYou may save time now, but studying feels more difficult.\nYour stress level increases by 5.");
             break;
         }
         System.out.println();
@@ -66,14 +67,14 @@ public class LunchScene extends Scene{
         // Question 1 end
         player.display();
         System.out.println();
-        System.out.println(" B. You look around to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you found a table near a building beside the canteen. Free from all the noise.");
+        Util.printTextColor(Util.boldBlue, " B. You look around for somewhere to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you find a table near a building beside the canteen, away from the noise.");
         System.out.println();
-        System.out.println("[1] You go to that table. Quietness helps calm your mind.");
-        System.out.println("[2] You sit with your friends in the loud canteen.");
+        Util.printTextColor(Util.boldGreen, "[1] You go to that table. Quietness helps calm your mind.");
+        Util.printTextColor(Util.boldGreen, "[2] You sit with your friends in the loud canteen.");
         System.out.println();
 
         int choice2 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
-        // * Clear the console and update the player's stress and luck based on their choice
+        // * Clear the console and update the player's stress based on their choice
         Util.clearConsole();
 
         switch (choice2) {
@@ -88,19 +89,19 @@ public class LunchScene extends Scene{
         player.display();
         System.out.println();
         
-        System.out.println(" B. You look around to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you found a table near a building beside the canteen. Free from all the noise.");
+        Util.printTextColor(Util.boldBlue, " B. You look around for somewhere to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you find a table near a building beside the canteen, away from the noise.");
         System.out.println();
-        System.out.println("[1] You go to that table. Quietness helps calm your mind.");
-        System.out.println("[2] You sit with your friends in the loud canteen.");
+        Util.printTextColor(Util.boldGreen, "[1] You go to that table. Quietness helps calm your mind.");
+        Util.printTextColor(Util.boldGreen, "[2] You sit with your friends in the loud canteen.");
         System.out.println();
         
         switch (choice2) {
             case 1:
-            System.out.println("Choosing the quiet, noise-free spot beside the building helps calm your mind and lowers your stress levels. Your stress level reduce.");
+            Util.displayAns("Choosing the quiet, noise-free spot beside the building helps calm your mind and lowers your stress levels.\nYour stress level decreases.");
             break;
 
             case 2:
-            System.out.println("Sitting in the crowded, noisy canteen increases your stress level due to the overwhelming noise environment. Your stress level increase.");
+            Util.displayAns("Sitting in the crowded, noisy canteen increases your stress level due to the overwhelming noise environment.\nYour stress level increases.");
             break;
         }
 
@@ -108,14 +109,14 @@ public class LunchScene extends Scene{
         Input.Continue();
         player.display();
         System.out.println();
-        System.out.println("C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
+        Util.printTextColor(Util.boldBlue, "C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
         System.out.println();
-        System.out.println("[1] You refuse politely and prioritize your studies.");
-        System.out.println("[2] You refuse rudely and tell them that they should study instead of messing around.");
-        System.out.println("[3] You said \"Hell yeah\" and agreed to hang out with them.");
+        Util.printTextColor(Util.boldGreen, "[1] You refuse politely and prioritize your studies.");
+        Util.printTextColor(Util.boldGreen, "[2] You refuse rudely and tell them that they should study instead of messing around.");
+        Util.printTextColor(Util.boldGreen, "[3] You say \"Hell yeah\" and agree to hang out with them.");
         System.out.println();
         int choice3 = Input.getUserInputIntWithPrompt("Enter your choice (1-3)", 1, 3);
-        // * Clear the console and update the player's stress and luck based on their choice
+        // * Clear the console and update the player's stress based on their choice
         Util.clearConsole();
 
         switch (choice3) {
@@ -133,61 +134,61 @@ public class LunchScene extends Scene{
 
         player.display();
         System.out.println();
-        System.out.println("C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
+        Util.printTextColor(Util.boldBlue, "C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
         System.out.println();
-        System.out.println("[1] You refuse politely and prioritize your studies.");
-        System.out.println("[2] You refuse rudely and tell them that they should study instead of messing around.");
-        System.out.println("[3] You said \"Hell yeah\" and agreed to hang out with them.");
+        Util.printTextColor(Util.boldGreen, "[1] You refuse politely and prioritize your studies.");
+        Util.printTextColor(Util.boldGreen, "[2] You refuse rudely and tell them that they should study instead of messing around.");
+        Util.printTextColor(Util.boldGreen, "[3] You say \"Hell yeah\" and agree to hang out with them.");
         System.out.println();
         switch(choice3){
             case 1:
-            System.out.println("Politely declining your friend's offer allows you to focus peacefully on preparing for tomorrow's exam without drama, reducing your overall stress. Your stress level reduce.");
+            Util.displayAns("Politely declining your friend's offer allows you to focus peacefully on preparing for tomorrow's exam without drama, reducing your overall stress.\nYour stress level decreases.");
             break;
 
             case 2:
-            System.out.println("Reacting with hostility causes tension between you and your friend, creating unnecessary conflict right before your exam and increasing your stress. Your stress level increase.");
+            Util.displayAns("Reacting with hostility causes tension between you and your friend, creating unnecessary conflict right before your exam and increasing your stress.\nYour stress level increases.");
             break;
 
             case 3:
-            System.out.println("Choosing to go out to karaoke and watch a movie when an exam is tomorrow causes significant stress, knowing you are avoiding study time. Your stress level increase.");
+            Util.displayAns("Choosing to go out to karaoke and watch a movie when an exam is tomorrow causes significant stress, knowing you are avoiding study time.\nYour stress level increases.");
             break;
         }
         System.out.println();
         Input.Continue();
         player.display();
          System.out.println();
-        System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
+        Util.printTextColor(Util.boldBlue, "D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
-        System.out.println("[1] You fill your water bottle up and drink it.");
-        System.out.println("[2] You order double espresso Americano.");
+        Util.printTextColor(Util.boldGreen, "[1] You order an Americano with a double shot of espresso.");
+        Util.printTextColor(Util.boldGreen, "[2] You fill your water bottle up and drink it.");
         System.out.println();
         int choice4 = Input.getUserInputIntWithPrompt("Enter your choice (1-2)", 1, 2);
-        // * Clear the console and update the player's stress and luck based on their choice
+        // * Clear the console and update the player's stress based on their choice
         Util.clearConsole();
 
-        switch (choice3) {
-            case 1 :
-                player.changeStress(3);
-                break;
+        switch (choice4) {
             case 2 :
-                player.changeStress(-5);
+                player.changeStress(-3);
+                break;
+            case 1 :
+                player.changeStress(5);
                 break;
         }
 
         player.display();
         System.out.println();
-        System.out.println("D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
+        Util.printTextColor(Util.boldBlue, "D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
-        System.out.println("[1] You fill your water bottle up and drink it.");
-        System.out.println("[2] You order double espresso Americano.");
+        Util.printTextColor(Util.boldGreen, "[1] You order an Americano with a double shot of espresso.");
+        Util.printTextColor(Util.boldGreen, "[2] You fill your water bottle up and drink it.");
         System.out.println();
         switch(choice4){
-            case 1:
-            System.out.println("Refreshed and properly hydrated, your body gets the clean, natural fuel it needs to stay sharp and maintain balanced, steady focus throughout your study session. Your stress level reduce.");
+            case 2:
+            Util.displayAns("Refreshed and properly hydrated, your body gets the clean, natural fuel it needs to stay sharp and maintain balanced, steady focus throughout your study session.\nYour stress level decreases.");
             break;
 
-            case 2:
-            System.out.println("Instead of helping, the strong espresso overstimulates your nervous system, leaving you feeling frantic, restless, and significantly more stressed about your upcoming exam. Your stress increase.");
+            case 1:
+            Util.displayAns("Instead of helping, the strong espresso overstimulates your nervous system, leaving you feeling frantic, restless, and significantly more stressed about your upcoming exam.\nYour stress increases.");
             break;
         }
         System.out.println();

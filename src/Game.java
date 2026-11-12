@@ -17,21 +17,21 @@ public class Game {
         while (player.isAlive()) {
 
             intro.play(player);
-            if(player.isAlive()) break;
+            if(!player.isAlive()) break;
             calculus.play(player);
-            if(player.isAlive()) break;
+            if(!player.isAlive()) break;
             lunch.play(player);
-            if(player.isAlive()) break;
+            if(!player.isAlive()) break;
             if(player.getStudyAfterLunch()){
                 StudyScene study = new StudyScene();
                 study.play(player);
-                if(player.isAlive()) break;
             } else {
                 HangOutScene hangOut = new HangOutScene();
                 hangOut.play(player);
-                if(player.isAlive()) break;
             }
+            if(!player.isAlive()) break;
             ending.play(player);
+            break;
         }
     finalScene.play(player);
 

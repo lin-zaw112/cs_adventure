@@ -2,39 +2,50 @@ import java.util.Scanner;
 public class Input {
     private static final Scanner cc = new Scanner(System.in);
 
+    public static class InputClosedException extends IllegalStateException {
+        private static final long serialVersionUID = 1L;
+
+        public InputClosedException() {
+            super("Input is closed.");
+        }
+    }
+
     public static void Continue() {
         System.out.println("Press Enter to continue...");
-        cc.nextLine();
-        // above line is to consume the newline character left in the input buffer
-        cc.nextLine();
+        readLine();
         Util.clearConsole();
     }
 
-    public static String getUserInputStringWithPrompt(String prompt) {
-        System.out.print(prompt + ": ");
-        while (!cc.hasNextLine()) {
-            System.out.println("Invalid input. Please enter a valid input");
-            cc.next();
-            System.out.print(prompt + ": ");
+    private static String readLine() {
+        if (!cc.hasNextLine()) {
+            throw new InputClosedException();
         }
         return cc.nextLine();
     }
 
+    public static String getUserInputStringWithPrompt(String prompt) {
+        System.out.print(prompt + ": ");
+        return readLine();
+    }
+
     public static int getInputIntWithPrompt(String prompt) {
         System.out.print(prompt + ": ");
-        while (!cc.hasNextInt()) {
-            System.out.println("Invalid input. Please enter a valid input");
-            cc.next();
-            System.out.print(prompt + ": ");
+        while (true) {
+            String line = readLine().trim();
+            try {
+                return Integer.parseInt(line);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a whole number.");
+                System.out.print(prompt + ": ");
+            }
         }
-        return cc.nextInt();
     }
 
     public static int getUserInputIntWithPrompt(String prompt, int min, int max) {
         int input = Input.getInputIntWithPrompt(prompt);
 
         while (input < min || input > max) {
-            System.out.println("Invalid input. Please enter a valid input");
+            System.out.println("Invalid input. Please enter a number from " + min + " to " + max + ".");
             input = getInputIntWithPrompt(prompt);
         }
         return input;
