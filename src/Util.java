@@ -3,11 +3,9 @@ public class Util {
     // Text Color
 
     public static final String resetColor="\u001B[0m";
-    public static final String red="\u001B[31m";
     // ? Blue and Light Blue are Primary Colors of the School of Information Technology (SIT) at KMUTT
     //  https://www.sit.kmutt.ac.th/en/organizationalidentity/
     public static final String blue="\u001B[38;2;51;102;153m";
-    public static final String lightBlue="\u001B[38;2;94;153;204m";
 
     public static final String green="\u001B[32m";
     public static final String shinyYellow="\u001B[93m";
@@ -16,15 +14,12 @@ public class Util {
 
     // Bold color
 
-    public static final String resetBold="\u001B[0m";
-    public static final String bold="\u001B[1m";
     public static final String boldRed="\u001B[1;31m";
     // ? Bold Blue and Bold Light Blue are Primary Colors of the School of Information Technology (SIT) at KMUTT
     //  https://www.sit.kmutt.ac.th/en/organizationalidentity/
     public static final String boldBlue="\u001B[1;38;2;51;102;153m";
     public static final String boldLightBlue="\u001B[1;38;2;94;153;204m";
     public static final String boldGreen="\u001B[1;32m";
-    public static final String boldShinyYellow="\u001B[1;93m";
 
 
     public static int getRandomNumber(int min, int max) {
