@@ -13,6 +13,7 @@ public class Game {
         CalculusScene calculus = new CalculusScene();
         LunchScene lunch = new LunchScene();
         EndingScene ending = new EndingScene();
+        HangOutScene hangOut = new HangOutScene();
 
 
 
@@ -23,7 +24,7 @@ public class Game {
             StudyScene study = new StudyScene();
             study.play(player);
         } else {
-            // TODO : Need to implement a scene for Handout Scene
+            hangOut.play(player);
         }
         ending.play(player);
     }
