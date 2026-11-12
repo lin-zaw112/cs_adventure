@@ -55,10 +55,13 @@ public class CalculusScene extends Scene {
                 Util.displayAns("You waste time by hooting, hollering, watching reels and playing games. Since you don't focus on lectures, you missed some important facts on the subject. Therefore, your anxiety increases by 4 because you don't understand today's topic.");
                 break;
         }
+
         // * Prompt the player to continue to the next scene
         System.out.println();
         Input.Continue();
-        
+
+        //! 1st question ends
+
         // *2nd question
         if (choice1 == 2) {
             // * Display the scene's title and description
@@ -95,10 +98,10 @@ public class CalculusScene extends Scene {
             );
             switch (choice2) {
                 case 1:
-                    Util.displayAns("You pretend not to hear your friend and continue listening to the lecture. Your friend eventually gives up asking you and tries to figure out the questions alone. Your stress level remains unchanged.");
+                    System.out.println("You pretend not to hear your friend and continue listening to the lecture. Your friend eventually gives up asking you and tries to figure out the questions alone. Your stress level remains unchanged.");
                     break;
                 case 2:
-                    Util.displayAns("Since you tell them that you as lost as them, you're starting to worry in your mind about your upcoming exam and get stress. Your stress increases by 5.");
+                    System.out.println("Since you tell them that you as lost as them, you're starting to worry in your mind about your upcoming exam and get stress. Your stress increases by 5.");
                     break;
             }
         } else {
@@ -149,9 +152,12 @@ public class CalculusScene extends Scene {
                     break;
             }
         }
+
         // * Prompt the player to continue to the next scene
         System.out.println();
         Input.Continue();
+
+        //! 2nd question ends
 
         // * 3rd question
         display();
@@ -194,6 +200,14 @@ public class CalculusScene extends Scene {
                 "[3] You don't take any notes because you think you are smarter than Issac Newton and Nikola Tesla combined."
         );
 
+
+        Util.displayQ(
+                "Do you take notes during the lecture? How?",
+                "[1] You take neat and clear notes that can help you review later.",
+                "[2] You take notes but it is not neat and confusing to read.",
+                "[3] You don't take any notes because you think you are smarter than Issac Newton and Nikola Tesla combined."
+        );
+
         switch (choice3) {
             case 1:
                 Util.displayAns("You carefully write down important formulas, examples, and explanations from the lecture. Your notes are well-organized and easy to understand, making it easier to review when you get home. Your stress decreases by 5.");
@@ -209,6 +223,8 @@ public class CalculusScene extends Scene {
         // * Prompt the player to continue to the next scene
         System.out.println();
         Input.Continue();
+
+        //! 3rd question ends
 
         // *4th question
         Util.displayQ(
@@ -240,5 +256,8 @@ public class CalculusScene extends Scene {
         // * Prompt the player to continue to the next scene
         System.out.println();
         Input.Continue();
+
+        //! 4th question ends
+        //! calculus scene ends
     }
 }
