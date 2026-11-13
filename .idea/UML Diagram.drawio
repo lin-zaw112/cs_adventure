@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="HDRlAQtxIkmeL0N9N8ua">
-    <mxGraphModel dx="8250" dy="4644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel dx="2276" dy="1281" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,7 +17,7 @@
           <mxGeometry height="420" width="490" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="jpXLIHbckm2fe_8PYdQw-6" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=13;spacing=0;" value="&lt;div style=&quot;padding:8px;text-align:center;font-weight:bold;&quot;&gt;Input&lt;/div&gt;&lt;div style=&quot;border-top:1px solid;padding:6px 8px;&quot;&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;- cc: Scanner {readOnly}&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-top:1px solid;padding:6px 8px;&quot;&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;+ Continue(): void&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;- readLine(): String&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;+ getUserInputStringWithPrompt(prompt: String): String&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;+ getInputIntWithPrompt(prompt: String): int&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;u&gt;+ getUserInputIntWithPrompt(prompt: String, min: int, max: int): int&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="240" width="490" x="50" y="540" as="geometry" />
+          <mxGeometry height="240" width="490" x="40" y="550" as="geometry" />
         </mxCell>
         <mxCell id="5BC0fkbHBdF0pa5SJvyA-2" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=13;spacing=0;" value="&lt;div style=&quot;padding:8px;text-align:center;font-weight:bold;&quot;&gt;&lt;div style=&quot;font-weight:normal;font-style:italic;&quot;&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;Scene&lt;/div&gt;&lt;div style=&quot;border-top:1px solid;padding:6px 8px;&quot;&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;- title: String {readOnly}&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;- description: String {readOnly}&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-top:1px solid;padding:6px 8px;&quot;&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;+ Scene(title: String, description: String)&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;+ getTitle(): String&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;+ getDescription(): String&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;+ display(): void&lt;/div&gt;&lt;div style=&quot;line-height:22px;&quot;&gt;&lt;i&gt;+ play(player: Player): void&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="230" width="500" x="595" y="760" as="geometry" />
@@ -67,7 +67,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="relationship-7" edge="1" parent="1" source="5BC0fkbHBdF0pa5SJvyA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=#ffffff;fontSize=12;dashed=1;endArrow=open;endFill=0;" target="jpXLIHbckm2fe_8PYdQw-1" value="formats / prints">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" x="-0.525" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="30" y="875" />
+              <mxPoint x="30" y="250" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="relationship-8" edge="1" parent="1" source="jpXLIHbckm2fe_8PYdQw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=#ffffff;fontSize=12;dashed=1;endArrow=open;endFill=0;" target="jpXLIHbckm2fe_8PYdQw-1" value="clears console">
           <mxGeometry relative="1" as="geometry" />
