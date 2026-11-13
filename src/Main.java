@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             playGame();
-        } catch (Input.InputClosedException e) {
+        } catch (Exception e) {
             System.out.println("\nInput closed. Thanks for playing!");
         }
     }
