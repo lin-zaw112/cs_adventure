@@ -1,14 +1,8 @@
 public class EndingScene extends Scene {
     public EndingScene() {
-        super("You finally stop studying after a couple of hours. Your stomach growls. You look at the time and realize that it's almost 9 p.m. You try to think of something to eat.",
-                "");
+        super("Evening", "You stop studying after a couple of hours. Your stomach growls. It's almost 9 p.m., and you think about what to eat.");
     }
 
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-    }
 
     @Override
     public void play(Player player) {
@@ -40,7 +34,6 @@ public class EndingScene extends Scene {
 
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "A. You don't have anything to eat so you open a food delivery app to order some food.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You order fast food from McDonald's.");
@@ -65,7 +58,6 @@ public class EndingScene extends Scene {
 
         // Question 2
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you have today. You deserve your rest.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You drop everything and just go to bed.");
@@ -90,7 +82,6 @@ public class EndingScene extends Scene {
         }
 
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "B. It's time to go to bed. You need to rest for tomorrow. You've given everything you have today. You deserve your rest.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You drop everything and just go to bed.");

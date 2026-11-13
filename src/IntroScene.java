@@ -7,20 +7,10 @@ public class IntroScene extends Scene {
     }
 
     @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, getDescription());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, "============================== Let's get ready for the exam! ===============================");
-        System.out.println();
-    }
-    @Override
     public void play(Player player) {
         // * Display the scene's title and description
         display();
         player.display();
-        System.out.println();
         Util.displayQ(
                 """
                         You see some notifications on your phone. It is your group chat blowing up with messages,
@@ -47,7 +37,6 @@ public class IntroScene extends Scene {
         // * Display the player's updated information and the scene's description
         display();
         player.display();
-        System.out.println();
         Util.displayQ(
                 """
                         You see some notifications on your phone. It is your group chat blowing up with messages,

@@ -4,24 +4,14 @@ public class Final extends Scene {
         super("The Final Verdict", "Your long and exhausting day comes to an end. It's time to face the consequences of your choices.");
     }
 
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, getDescription());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, "=============================== The Final Verdict ===============================");
-        System.out.println();
-    }
 
     @Override
     public void play(Player player) {
         display();
         player.display();
-        System.out.println();
         
         if (player.getStress() == 0) {
-            Util.printTextColor(Util.boldLightBlue, "=============================== The Ascension to Godhood ===============================");
+            Util.printTextColor(Util.boldLightBlue, Util.formatTitle("The Ascension to Godhood"));
             System.out.println();
             Util.displayAns("Suddenly, it feels like the world has gone quiet. \r\n" + //
                                 "\r\n" + //
@@ -29,7 +19,7 @@ public class Final extends Scene {
                                 "\r\n" + //
                                 "You have ascended. YOU HAVE REACHED GODHOOD!!!");
         } else if (player.getStress() <= 40) {
-            Util.printTextColor(Util.boldLightBlue, "=============================== The Light at the End ===============================");
+            Util.printTextColor(Util.boldLightBlue, Util.formatTitle("The Light at the End"));
             System.out.println();
             Util.displayAns("The exam results are finally announced.\nYou nervously check your results.\r\n" + //
                                 "\r\n" + //
@@ -39,7 +29,7 @@ public class Final extends Scene {
                                 "\r\n" + //
                                 "You smile with relief, knowing that you made it through.");
         } else if (player.getStress() <= 89) {
-            Util.printTextColor(Util.boldLightBlue, "=============================== The Price of Procrastination ===============================");
+            Util.printTextColor(Util.boldLightBlue, Util.formatTitle("The Price of Procrastination"));
             System.out.println();
             Util.displayAns("The exam results are announced. \r\n" + //
                                 "\r\n" + //
@@ -51,7 +41,7 @@ public class Final extends Scene {
                                 "\r\n" + //
                                 "It's not the end. You can always try again.");
         } else {
-            Util.printTextColor(Util.boldLightBlue, "=============================== The Breaking Point ===============================");
+            Util.printTextColor(Util.boldLightBlue, Util.formatTitle("The Breaking Point"));
             System.out.println();
             Util.displayAns("After pushing yourself too hard, you suddenly feel dizzy and collapse. \r\n" + //
                                 "\r\n" + //

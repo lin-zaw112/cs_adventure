@@ -2,13 +2,7 @@ import java.util.Scanner;
 public class Input {
     private static final Scanner cc = new Scanner(System.in);
 
-    public static class InputClosedException extends IllegalStateException {
-        private static final long serialVersionUID = 1L;
 
-        public InputClosedException() {
-            super("Input is closed.");
-        }
-    }
 
     public static void Continue() {
         System.out.println("Press Enter to continue...");
@@ -18,7 +12,7 @@ public class Input {
 
     private static String readLine() {
         if (!cc.hasNextLine()) {
-            throw new InputClosedException();
+           System.out.println("No input available. Please provide input.");
         }
         return cc.nextLine();
     }

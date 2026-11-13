@@ -1,12 +1,6 @@
 public class StudyScene extends Scene {
     public StudyScene() {
-        super("After lunch, you choose to study.", "");
-    }
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-    
+        super("Study Time", "After lunch, you choose to study.");
     }
     @Override
     public void play(Player player) {
@@ -24,7 +18,6 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "A. You plan to review and study for the exam. You think about some places to study.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You choose the library.");
@@ -66,7 +59,6 @@ public class StudyScene extends Scene {
         }
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "B. You take out your books and laptop from your bag. You need to lock in and review your notes.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You look at the notes from page one to the end. ");
@@ -110,7 +102,6 @@ public class StudyScene extends Scene {
         }
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "C. You realize that you did not take any notes and that you are in trouble.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] Try to calm down and search for related topics on the internet and study.");
@@ -154,7 +145,6 @@ public class StudyScene extends Scene {
         }
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "C. You have been studying for hours without moving. You feel tired and your eyes are sore. You need to take a break.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You try to move around and stretch every hour.");

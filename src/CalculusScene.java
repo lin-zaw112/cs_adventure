@@ -3,15 +3,6 @@ public class CalculusScene extends Scene {
         super("You are in the Calculus class", "After finally leaving your room, you rush to university, hoping you haven't missed too much of the Calculus lecture.");
     }
 
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, getDescription());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, "=============================== Welcome to the Calculus class ===============================");
-        System.out.println();
-    }
 
     @Override
     public void play(Player player) {

@@ -8,12 +8,16 @@ public abstract class Scene {
     }
 
     public String getTitle() {
-        return "=============================== " + title + " ==============================";
+        return Util.formatTitle(title);
     }
 
-    public String getDescription() {
-        return description;
+    public void display() {
+        Util.printTextColor(Util.boldLightBlue, getTitle());
+        System.out.println();
+        if (!description.isBlank()) {
+            Util.printTextColor(Util.boldLightBlue, description.strip());
+            System.out.println();
+        }
     }
-    public abstract void display();
     public abstract void play(Player player);
 }

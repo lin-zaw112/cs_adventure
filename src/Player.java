@@ -54,6 +54,7 @@ public class Player {
             System.out.print("Stress: ");
             Util.printTextColor(Util.boldRed, getStressLevel());
         }
+        System.out.println();
     }
 
     public boolean getTakeNotes() {

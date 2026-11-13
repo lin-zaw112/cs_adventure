@@ -40,12 +40,20 @@ public class Util {
         System.out.println(color + text + resetColor);
     }
 
-    public static void displayQ(String Question, String... options){
-        System.out.println();
-        printTextColor(Util.boldBlue,Question);
-        System.out.println();
-        for (String option : options) {
-            printTextColor(Util.boldGreen,option);
+    public static String formatTitle(String title) {
+        String label = " " + title.strip() + " ";
+        int padding = Math.max(0, 80 - label.length());
+        int left = padding / 2;
+        return "=".repeat(left) + label + "=".repeat(padding - left);
+    }
+
+    public static void displayQ(String question, String... options){
+        printTextColor(Util.boldBlue, question.strip());
+        if (options.length > 0) {
+            System.out.println();
+            for (String option : options) {
+                printTextColor(Util.boldGreen, option.strip());
+            }
         }
         System.out.println();
     }

@@ -3,22 +3,12 @@ public class HangOutScene extends Scene {
         super("Hangout Scene","After finishing your drink, your friends come over to you and say, \"Let's go to a nearby karaoke room!\" You agree to join them, and all of you head to the karaoke room together.");
     }
 
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, getDescription());
-        System.out.println();
-        Util.printTextColor(Util.boldLightBlue, "=============================== Let's have some fun!! ==============================");
-        System.out.println();
-    }
 
     @Override
     public void play(Player player) {
         // * Display the scene's title and description
         display();
         player.display();
-        System.out.println();
         Util.displayQ(
                 """
                         A. You and your friends decide to go to the karaoke room first. You think it will reduce exam stress. You arrive at the karaoke room with your friends. The disco lights are flashing. The energy in the room is at an all-time high. You will sing first.\s
@@ -45,7 +35,6 @@ public class HangOutScene extends Scene {
 
         display();
         player.display();
-        System.out.println();
         Util.displayQ(
                 """
                         A. You and your friends decide to go to the karaoke room first. You think it will reduce exam stress. You arrive at the karaoke room with your friends. The disco lights are flashing. The energy in the room is at an all-time high. You will sing first.\s

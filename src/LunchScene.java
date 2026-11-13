@@ -1,14 +1,8 @@
 public class LunchScene extends Scene{
     public LunchScene() {
-        super( "You and your friends arrive at the school canteen which is filled with students. You are really tired from the class, and you need to refuel.","");
+        super("Lunch Break", "You and your friends arrive at the busy school canteen. You are tired from class and need to refuel.");
     }
 
-    @Override
-    public void display() {
-        Util.printTextColor(Util.boldLightBlue, getTitle());
-        System.out.println();
-    
-    }
 
     @Override
     public void play(Player player) {
@@ -40,7 +34,6 @@ public class LunchScene extends Scene{
 
         display();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "A. You look around and find something to eat. There is so much variety of food, but you need to choose carefully. Make the wrong choice, and you won't be able to focus on studying. ");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You choose a warm, filling meal with vegetables, carbs, and protein.");
@@ -66,7 +59,6 @@ public class LunchScene extends Scene{
 
         // Question 1 end
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, " B. You look around for somewhere to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you find a table near a building beside the canteen, away from the noise.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You go to that table. Quietness helps calm your mind.");
@@ -87,7 +79,6 @@ public class LunchScene extends Scene{
         }
         
         player.display();
-        System.out.println();
         
         Util.printTextColor(Util.boldBlue, " B. You look around for somewhere to sit. Since it is afternoon, there is no doubt that the canteen is loud and crowded. Fortunately, you find a table near a building beside the canteen, away from the noise.");
         System.out.println();
@@ -108,7 +99,6 @@ public class LunchScene extends Scene{
         System.out.println();
         Input.Continue();
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You refuse politely and prioritize your studies.");
@@ -133,7 +123,6 @@ public class LunchScene extends Scene{
         }
 
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "C. Your friend comes up to you and invites you to hang out in the evening. They will go to a karaoke room and watch a movie.  (Really? The exam is tomorrow and you want to hang out? You need new friends gng).");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You refuse politely and prioritize your studies.");
@@ -156,7 +145,6 @@ public class LunchScene extends Scene{
         System.out.println();
         Input.Continue();
         player.display();
-         System.out.println();
         Util.printTextColor(Util.boldBlue, "D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You order an Americano with a double shot of espresso.");
@@ -176,7 +164,6 @@ public class LunchScene extends Scene{
         }
 
         player.display();
-        System.out.println();
         Util.printTextColor(Util.boldBlue, "D. While you're sitting there, you feel thirsty. Your water bottle is empty. You look around and see a water station and a coffee vending machine.");
         System.out.println();
         Util.printTextColor(Util.boldGreen, "[1] You order an Americano with a double shot of espresso.");
