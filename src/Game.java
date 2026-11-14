@@ -2,6 +2,7 @@ import java.io.*;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 import javax.sound.sampled.LineUnavailableException;
@@ -17,8 +18,7 @@ public class Game {
     public void start() {
         //Playing audio
 
-        String filePath="C:\\Users\\Liam\\Downloads\\Kmutt sem1\\CSC102 java\\project 1\\cs_adventure\\src\\music\\slayr_-_Holding_Instrumental.wav";
-
+        String filePath="./music/slayr_-_Holding_Instrumental.wav";
         File file=new File(filePath);
         try(AudioInputStream audioStream = AudioSystem.getAudioInputStream(file)){
 
@@ -27,6 +27,11 @@ public class Game {
 
             //play with loop
             clip.loop(Clip.LOOP_CONTINUOUSLY);
+
+            //Reducing the volumn
+            FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+
+            volume.setValue(-15.0f);
 
         }catch(LineUnavailableException e){
             System.out.println("Cannot access audio file;");
