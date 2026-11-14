@@ -1,4 +1,4 @@
-public abstract class Scene {
+public abstract class Scene implements Playable {
     private final String title;
     private final String description;
 

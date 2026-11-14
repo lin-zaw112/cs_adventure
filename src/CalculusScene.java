@@ -54,10 +54,10 @@ public class CalculusScene extends Scene {
         //! 1st question ends
 
         // *2nd question
+        display();
+        player.display();
         if (choice1 == 2) {
             // * Display the scene's title and description
-            display();
-            player.display();
             Util.displayQ(
                     """
                             Your friend who is sitting next to you asks you some questions about the class topic. What do you do?
@@ -96,8 +96,6 @@ public class CalculusScene extends Scene {
                     break;
             }
         } else {
-            display();
-            player.display();
             Util.displayQ(
                     """
                             Your friend who is sitting next to you asks you some questions about the class topic. What do you do?

@@ -24,10 +24,7 @@ public class EndingScene extends Scene {
             case 2:
                 player.changeStress(-10);
                 break;
-            case 1:
-                player.changeStress(+5);
-                break;
-            case 3:
+            case 1, 3:
                 player.changeStress(+5);
                 break;
         }

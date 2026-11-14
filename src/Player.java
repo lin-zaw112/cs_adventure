@@ -80,7 +80,7 @@ public class Player {
     }
 
     public void changeStress(int amount) {
-        stress = Math.clamp(stress + amount, 0, 100);
+        stress = (int) Math.max(0L, Math.min(100L, (long) stress + amount));
     }
 
     public void setTakeNotes(boolean takeNotes) {

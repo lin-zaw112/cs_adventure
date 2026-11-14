@@ -10,7 +10,6 @@ public class Util {
     public static final String green="\u001B[32m";
     public static final String shinyYellow="\u001B[93m";
 
-    //toDo ** Format -> (Util.red +"...."+ resetColor)
 
     // Bold color
 
