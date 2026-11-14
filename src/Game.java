@@ -1,11 +1,46 @@
+import java.io.*;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+import javax.sound.sampled.LineUnavailableException;
+
 public class Game {
     private final Player player;
+    private static Clip clip;
 
     public Game(Player player) {
         this.player = player;
     }
 
     public void start() {
+        //Playing audio
+
+        String filePath="C:\\Users\\Liam\\Downloads\\Kmutt sem1\\CSC102 java\\project 1\\cs_adventure\\src\\music\\slayr_-_Holding_Instrumental.wav";
+
+        File file=new File(filePath);
+        try(AudioInputStream audioStream = AudioSystem.getAudioInputStream(file)){
+
+            clip=AudioSystem.getClip();
+            clip.open(audioStream);
+
+            //play with loop
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+
+        }catch(LineUnavailableException e){
+            System.out.println("Cannot access audio file;");
+        }
+        catch(FileNotFoundException e){
+            System.out.println("File cannot find.");
+        }catch(UnsupportedAudioFileException e){
+            System.out.println("Audio type is wrong!");
+        }
+        catch(IOException e){
+            System.out.println("Something went wrong with audio");
+        }
+
+
         // * Clear the console and display the player's information
         Util.clearConsole();
         // * Show the intro Scene
@@ -33,7 +68,11 @@ public class Game {
             ending.play(player);
             break;
         }
+
     finalScene.play(player);
+    
+    //closing the audio if the Game end
+    clip.close();
 
 
     }
