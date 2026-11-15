@@ -51,7 +51,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice2) {
             case 2 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 1 :
                 player.changeStress(5);
@@ -66,10 +66,10 @@ public class StudyScene extends Scene {
         System.out.println();
         switch (choice2) {
             case 2:
-                Util.displayAns("You start practicing questions and only look at the notes when necessary.\nYou feel confident and prepared for the exam.");
+                Util.displayAns("You start practicing questions and only look at the notes when necessary.\nYou feel confident and prepared for the exam. Your stress level decreases by 5.");
                 break;
             case 1:
-                Util.displayAns("You look at the notes from page one to the end.\nYou feel overwhelmed and stressed out.");
+                Util.displayAns("You look at the notes from page one to the end.\nYou feel overwhelmed and stressed out. Your stress level increases by 5.");
                 break;
         }
 
@@ -91,7 +91,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice2) {
             case 1 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 2 :
                 player.changeStress(10);
@@ -137,7 +137,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice3) {
             case 1 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 2 :
                 player.changeStress(5);
