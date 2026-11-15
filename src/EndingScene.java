@@ -22,10 +22,10 @@ public class EndingScene extends Scene {
         Util.clearConsole();
         switch (choice1) {
             case 2:
-                player.changeStress(-5);
+                player.changeStress(-4);
                 break;
             case 1, 3:
-                player.changeStress(+5);
+                player.changeStress(+8);
                 break;
         }
 
