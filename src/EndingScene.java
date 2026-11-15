@@ -40,13 +40,13 @@ public class EndingScene extends Scene {
 
         switch (choice1) {
             case 2:
-                Util.displayAns("You feel energized with healthy food and ready for another study session. Your stress level decreases by 5.");
+                Util.displayAns("You feel energized with healthy food and ready for another study session. Your stress level decreases.");
                 break;
             case 1:
-                Util.displayAns("You feel a little bit sluggish but you study anyway. Your stress level increases by 5.");
+                Util.displayAns("You feel a little bit sluggish but you study anyway. Your stress level increases.");
                 break;
             case 3:
-                Util.displayAns("Your stomach is making a lot of noise but you ignore it and keep on studying. Your stress level increases by 5.");
+                Util.displayAns("Your stomach is making a lot of noise but you ignore it and keep on studying. Your stress level increases.");
                 break;
         }
 
@@ -88,13 +88,13 @@ public class EndingScene extends Scene {
 
         switch (choice2) {
             case 2:
-                Util.displayAns("You feel refreshed and calm.\nYou get under the blanket and drift off to sleep. Your stress level decreases by 10.");
+                Util.displayAns("You feel refreshed and calm.\nYou get under the blanket and drift off to sleep. Your stress level decreases.");
                 break;
             case 1:
-                Util.displayAns("You feel a little bit dirty but you still sleep anyway. Your stress level increases by 1.");
+                Util.displayAns("You feel a little bit dirty but you still sleep anyway. Your stress level increases.");
                 break;
             case 3:
-                Util.displayAns("You feel so stressed that you keep studying until you fall asleep at the table. Your stress level increases by 20.");
+                Util.displayAns("You feel so stressed that you keep studying until you fall asleep at the table. Your stress level increases.");
                 break;
         }
         System.out.println();

@@ -23,10 +23,10 @@ public class HangOutScene extends Scene {
         Util.clearConsole();
         switch (choice1) {
             case 1 :
-                player.changeStress(-8);
+                player.changeStress(-3);
                 break;
             case 2 :
-                player.changeStress(+10);
+                player.changeStress(10);
                 break;
             case 3 :
                 player.changeStress( 5);
@@ -46,13 +46,13 @@ public class HangOutScene extends Scene {
 
         switch (choice1) {
             case 1:
-                Util.displayAns("You pick an energetic hyperpop song, and your friends immediately join in, dancing and singing along.\nEveryone has an amazing time.\nYour stress decreases by 8.");
+                Util.displayAns("You pick an energetic hyperpop song, and your friends immediately join in, dancing and singing along.\nEveryone has an amazing time.\nYour stress decreases.");
                 break;
             case 2:
-                Util.displayAns("You start singing along to the heartbreaking lyrics, but soon memories of your ex come rushing back.\nYour mood drops, and your stress increases by 10.");
+                Util.displayAns("You start singing along to the heartbreaking lyrics, but soon memories of your ex come rushing back.\nYour mood drops, and your stress increases.");
                 break;
             case 3:
-                Util.displayAns("You confidently start singing, but your friends immediately complain about your song choice and grab the microphone from you.\nEveryone laughs, leaving you embarrassed.\nYour stress increases by 5.");
+                Util.displayAns("You confidently start singing, but your friends immediately complain about your song choice and grab the microphone from you.\nEveryone laughs, leaving you embarrassed.\nYour stress increases.");
                 break;
         }
 
@@ -92,10 +92,10 @@ public class HangOutScene extends Scene {
 
         switch (choice2) {
             case 1:
-                Util.displayAns("You dominate every match and carry your team to victory.\nYour friends start calling you \"Faker\" and cheering for you.\nYou feel like a gaming legend, and your confidence goes through the roof.\nYour stress decreases by 5.");
+                Util.displayAns("You dominate every match and carry your team to victory.\nYour friends start calling you \"Faker\" and cheering for you.\nYou feel like a gaming legend, and your confidence goes through the roof.\nYour stress decreases.");
                 break;
             case 2:
-                Util.displayAns("You keep losing match after match because you cannot concentrate.\nYour friends start questioning your gaming skills, and your frustration builds up.\nYour stress increases by 5.");
+                Util.displayAns("You keep losing match after match because you cannot concentrate.\nYour friends start questioning your gaming skills, and your frustration builds up.\nYour stress increases.");
                 break;
 
         }  
