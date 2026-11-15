@@ -40,10 +40,10 @@ public class CalculusScene extends Scene {
                 );
         switch (choice1) {
             case 1:
-                Util.displayAns("You sit in the front row, where you can hear the professor clearly and follow the lesson.\nYou can also ask questions whenever you don't understand something.\nYour stress decreases by 3.");
+                Util.displayAns("You sit in the front row, where you can hear the professor clearly and follow the lesson.\nYou can also ask questions whenever you don't understand something.\nYour stress decreases.");
                 break;
             case 2:
-                Util.displayAns("You waste time by hooting, hollering, watching reels and playing games.\nSince you don't focus on lectures, you miss some important facts on the subject.\nTherefore, your anxiety increases by 4 because you don't understand today's topic.");
+                Util.displayAns("You waste time by hooting, hollering, watching reels and playing games.\nSince you don't focus on lectures, you miss some important facts on the subject.\nTherefore, your anxiety increases because you don't understand today's topic.");
                 break;
         }
 
@@ -92,7 +92,7 @@ public class CalculusScene extends Scene {
                     Util.displayAns("You pretend not to hear your friend and continue listening to the lecture.\nYour friend eventually gives up asking you and tries to figure out the questions alone.\nYour stress level remains unchanged.");
                     break;
                 case 2:
-                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5");
+                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases.");
                     break;
             }
         } else {
@@ -131,13 +131,13 @@ public class CalculusScene extends Scene {
             );
             switch (choice2) {
                 case 1:
-                    Util.displayAns("You try your best to explain the calculus concepts step by step.\nAs you explain the questions, you also improve your own understanding of the topic.\nYour stress decreases by 5.");
+                    Util.displayAns("You try your best to explain the calculus concepts step by step.\nAs you explain the questions, you also improve your own understanding of the topic.\nYour stress decreases.");
                     break;
                 case 2:
                     Util.displayAns("You pretend not to hear your friend and continue listening to the lecture.\nYour friend eventually gives up asking you and tries to figure out the questions alone.\nYour stress level remains unchanged.");
                     break;
                 case 3:
-                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5");
+                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases.");
                     break;
             }
         }
@@ -190,13 +190,13 @@ public class CalculusScene extends Scene {
         );
         switch (choice3) {
             case 2:
-                Util.displayAns("You carefully write down important formulas, examples, and explanations from the lecture.\nYour notes are well-organized and easy to understand, making it easier to review when you get home.\nYour stress decreases by 5.");
+                Util.displayAns("You carefully write down important formulas, examples, and explanations from the lecture.\nYour notes are well-organized and easy to understand, making it easier to review when you get home.\nYour stress decreases.");
                 break;
             case 1:
-                Util.displayAns("You try to write everything down quickly, but your handwriting becomes messy and difficult to understand.\nWhen you look back at your notes, even you struggle to read what you wrote.\nYour stress increases by 1.");
+                Util.displayAns("You try to write everything down quickly, but your handwriting becomes messy and difficult to understand.\nWhen you look back at your notes, even you struggle to read what you wrote.\nYour stress increases.");
                 break;
             case 3:
-                Util.displayAns("You confidently decide that taking notes is unnecessary because you think you are smarter than Isaac Newton and Nikola Tesla combined.\nHowever, you feel stressed because you don't fully understand some topics.\nYour stress increases by 5.");
+                Util.displayAns("You confidently decide that taking notes is unnecessary because you think you are smarter than Isaac Newton and Nikola Tesla combined.\nHowever, you feel stressed because you don't fully understand some topics.\nYour stress increases.");
                 break;
         }
 
@@ -223,7 +223,7 @@ public class CalculusScene extends Scene {
                     """
                             The teacher asks a multiple-choice question. You put your hand up and try to answer the question. You guess the answer.
                             """);
-            Util.displayAns("Unfortunately, your answer is incorrect.\nThe professor corrects you in front of your friends, leaving you embarrassed.\nYour stress increases by 5.");
+            Util.displayAns("Unfortunately, your answer is incorrect.\nThe professor corrects you in front of your friends, leaving you embarrassed.\nYour stress increases.");
         } else if (randomNumber == 6) {
             player.changeStress(-8);
             player.display();
@@ -231,7 +231,7 @@ public class CalculusScene extends Scene {
                     """
                             The teacher asks a multiple-choice question. You put your hand up and try to answer the question. You guess the answer.
                             """);
-            Util.displayAns("You successfully give the correct answer.\nThe professor acknowledges your effort, and you feel proud of yourself.\nYour stress level decreases by 8.");
+            Util.displayAns("You successfully give the correct answer.\nThe professor acknowledges your effort, and you feel proud of yourself.\nYour stress level decreases.");
         }
 
         // * Prompt the player to continue to the next scene
