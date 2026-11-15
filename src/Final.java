@@ -8,6 +8,8 @@ public class Final extends Scene {
     @Override
     public void play(Player player) {
         display();
+        System.out.println();
+        Input.Continue();
         player.display();
         
         if (player.getStress() == 0) {
