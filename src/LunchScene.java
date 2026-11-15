@@ -22,10 +22,10 @@ public class LunchScene extends Scene{
         Util.clearConsole();
         switch (choice) {
             case 1 :
-                player.changeStress(-3);
+                player.changeStress(-1);
                 break;
             case 2 :
-                player.changeStress(3);
+                player.changeStress(5);
                 break;
             case 3 :
                 player.changeStress( 5);
@@ -71,10 +71,10 @@ public class LunchScene extends Scene{
 
         switch (choice2) {
             case 1 :
-                player.changeStress(-3);
+                player.changeStress(-2);
                 break;
             case 2 :
-                player.changeStress(3);
+                player.changeStress(4);
                 break;
         }
         
@@ -111,10 +111,10 @@ public class LunchScene extends Scene{
 
         switch (choice3) {
             case 1 :
-                player.changeStress(-4);
+                player.changeStress(-2);
                 break;
             case 2 :
-                player.changeStress(3);
+                player.changeStress(4);
                 break;
             case 3 :
                 player.changeStress( 5);
@@ -156,7 +156,7 @@ public class LunchScene extends Scene{
 
         switch (choice4) {
             case 2 :
-                player.changeStress(-3);
+                player.changeStress(-2);
                 break;
             case 1 :
                 player.changeStress(5);
