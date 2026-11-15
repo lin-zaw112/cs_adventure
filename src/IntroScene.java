@@ -49,13 +49,13 @@ public class IntroScene extends Scene {
 
         switch (choice1) {
             case 1:
-                Util.displayAns("After replying to your classmates, you put your phone aside and head to the bathroom to freshen up.\nYour stress level decreases a little.");
+                Util.displayAns("After replying to your classmates, you put your phone aside and head to the bathroom to freshen up.\nYour stress level decreases by 5.");
                 break;
             case 2:
                 Util.displayAns("You decide not to get distracted by the group chat and remain calm about tomorrow's exam.\nYour stress level remains unchanged.");
                 break;
             case 3:
-                Util.displayAns("Seeing your classmates panic makes you anxious.\nYou begin doubting your preparation and worrying about tomorrow's exam.\nYour stress level increases.");
+                Util.displayAns("Seeing your classmates panic makes you anxious.\nYou begin doubting your preparation and worrying about tomorrow's exam.\nYour stress level increases by 5.");
                 break;
         }
         // * Prompt the player to continue to the next scene
@@ -101,13 +101,13 @@ public class IntroScene extends Scene {
 
         switch (choice2) {
             case 2:
-                Util.displayAns("After finishing your breakfast, you check the time and realize you need to get ready for class.\nSo, you head to your bedroom and open your wardrobe to find something to wear.\nYour stress level decreases.");
+                Util.displayAns("After finishing your breakfast, you check the time and realize you need to get ready for class.\nSo, you head to your bedroom and open your wardrobe to find something to wear.\nYour stress level decreases by 5.");
                 break;
             case 1:
-                Util.displayAns("After spending some time dealing with your stomach discomfort, you realize that you are running out of time.\nYou head to your bedroom to get dressed for class.\nYour stress level increases a little.");
+                Util.displayAns("After spending some time dealing with your stomach discomfort, you realize that you are running out of time.\nYou head to your bedroom to get dressed for class.\nYour stress level increases by 3.");
                 break;
             case 3:
-                Util.displayAns("You eat nothing to save time.\nYour stress level increases for sure.");
+                Util.displayAns("You eat nothing to save time.\nYour stress level increases by 5.");
                 break;
         }
         // * Prompt the player to continue to the next scene
@@ -148,7 +148,7 @@ public class IntroScene extends Scene {
                 "[3] Spend 10 minutes choosing the best outfit.");
         switch (choice3) {
             case 1:
-                Util.displayAns("After getting dressed, you grab your bag and prepare to leave for class.\nBefore stepping outside, you make sure everything is ready.\nYour stress level decreases.");
+                Util.displayAns("After getting dressed, you grab your bag and prepare to leave for class.\nBefore stepping outside, you make sure everything is ready.\nYour stress level decreases by 1.");
                 break;
             case 2:
                 Util.displayAns("After getting dressed and grabbing your bag, you finally head outside and make your way to university.\nYour stress level remains unchanged.");
