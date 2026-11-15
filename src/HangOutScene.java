@@ -23,10 +23,10 @@ public class HangOutScene extends Scene {
         Util.clearConsole();
         switch (choice1) {
             case 1 :
-                player.changeStress(-8);
+                player.changeStress(-3);
                 break;
             case 2 :
-                player.changeStress(+10);
+                player.changeStress(10);
                 break;
             case 3 :
                 player.changeStress( 5);
