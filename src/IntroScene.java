@@ -82,9 +82,7 @@ public class IntroScene extends Scene {
                 player.changeStress(-5);
                 break;
             case 1 :
-
                player.changeStress(3);
-
                 break;
             case 3 :
                 player.changeStress( 5);

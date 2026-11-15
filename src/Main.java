@@ -11,6 +11,7 @@ public class Main {
 
             // * Get the player's name and create a new Player object
             Player player = new Player();
+
             String name = Input.getUserInputStringWithPrompt("Enter Your Name");
 
             // * Set the player's name

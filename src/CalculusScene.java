@@ -1,6 +1,6 @@
 public class CalculusScene extends Scene {
     public CalculusScene() {
-        super("You are in the Calculus class", "After finally leaving your room, you rush to university, hoping you haven't missed too much of the Calculus lecture.");
+        super("You are in the Calculus class", "After finally leaving your room, you rush to university, \nhoping you haven't missed too much of the Calculus lecture.");
     }
 
 

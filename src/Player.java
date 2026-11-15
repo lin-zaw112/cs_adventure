@@ -37,7 +37,7 @@ public class Player {
         if(this.stress >= 90) {
             this.isAlive = false;
         }
-        return this.isAlive;
+        return !this.isAlive;
     }
 
 
@@ -76,7 +76,10 @@ public class Player {
         this.isAlive = true;
     }
     public void setName(String name) {
-        this.name = name;
+        if(!name.isEmpty()) {
+            this.name = name;
+        }
+
     }
 
     public void changeStress(int amount) {

@@ -2,10 +2,8 @@ import java.util.Scanner;
 public class Input {
     private static final Scanner cc = new Scanner(System.in);
 
-
-
     public static void Continue() {
-        System.out.println("Press Enter to continue...");
+        System.out.print("Press Enter to continue...");
         readLine();
         Util.clearConsole();
     }
