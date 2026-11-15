@@ -80,6 +80,8 @@ public class HangOutScene extends Scene {
 
         }
 
+        Util.clearConsole(); 
+        
         player.display();
         Util.displayQ("""
                         B. After singing your hearts out, you guys go to the nearby gaming cafe. It’s time to show your real talent.
@@ -96,8 +98,9 @@ public class HangOutScene extends Scene {
                 Util.displayAns("You keep losing match after match because you cannot concentrate.\nYour friends start questioning your gaming skills, and your frustration builds up.\nYour stress increases by 5.");
                 break;
 
-        }
-
+        }  
         Util.displayAns("After that, you go home.");
+        System.out.println();
+        Input.Continue();
     }
 }
