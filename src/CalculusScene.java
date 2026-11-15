@@ -216,7 +216,7 @@ public class CalculusScene extends Scene {
         int randomNumber = Util.getRandomNumber(1, 6);
         // * Clear the console and update the player's stress based on their choice
         Util.clearConsole();
-        if (randomNumber > 0 && randomNumber <= 3) {
+        if (randomNumber > 0 && randomNumber <= 5) {
             player.changeStress(5);
             player.display();
             Util.displayQ(
@@ -224,7 +224,7 @@ public class CalculusScene extends Scene {
                             The teacher asks a multiple-choice question. You put your hand up and try to answer the question. You guess the answer.
                             """);
             Util.displayAns("Unfortunately, your answer is incorrect.\nThe professor corrects you in front of your friends, leaving you embarrassed.\nYour stress increases by 5.");
-        } else if (randomNumber > 3 && randomNumber <= 6) {
+        } else if (randomNumber == 6) {
             player.changeStress(-8);
             player.display();
             Util.displayQ(
