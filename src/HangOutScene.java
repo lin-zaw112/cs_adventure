@@ -99,17 +99,5 @@ public class HangOutScene extends Scene {
         }
 
         Util.displayAns("After that, you go home.");
-
-
-
-
     }
-
-
-
-
-
 }
-
-
-

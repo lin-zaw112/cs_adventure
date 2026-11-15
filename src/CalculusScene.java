@@ -92,7 +92,7 @@ public class CalculusScene extends Scene {
                     Util.displayAns("You pretend not to hear your friend and continue listening to the lecture.\nYour friend eventually gives up asking you and tries to figure out the questions alone.\nYour stress level remains unchanged.");
                     break;
                 case 2:
-                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5.");
+                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5");
                     break;
             }
         } else {
@@ -137,7 +137,7 @@ public class CalculusScene extends Scene {
                     Util.displayAns("You pretend not to hear your friend and continue listening to the lecture.\nYour friend eventually gives up asking you and tries to figure out the questions alone.\nYour stress level remains unchanged.");
                     break;
                 case 3:
-                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5.");
+                    Util.displayAns("Admitting that you are just as lost makes you worry about the upcoming exam.\nYour stress increases by 5");
                     break;
             }
         }
