@@ -8,7 +8,7 @@ public class Game {
     }
 
     public void start() {
-        musicPlayer.play("./music/slayr_-_Holding_Instrumental.wav");
+        // musicPlayer.play("C:\\Users\\USER\\Downloads\\cs_adventure\\src\\music\\slayr_-_Holding_Instrumental.wav");
 
         try {
             Util.clearConsole();
