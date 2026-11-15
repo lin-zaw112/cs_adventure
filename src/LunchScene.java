@@ -43,15 +43,15 @@ public class LunchScene extends Scene{
 
         switch(choice) {
             case 1:
-            Util.displayAns("This is a balanced, nutritious meal.\nThe combination of protein, vegetables, and wholesome ingredients gives your brain steady energy without causing a sugar crash or sluggishness, allowing you to focus effectively on your studying.\nYour stress level decreases by 3.");
+            Util.displayAns("This is a balanced, nutritious meal.\nThe combination of protein, vegetables, and wholesome ingredients gives your brain steady energy without causing a sugar crash or sluggishness, allowing you to focus effectively on your studying.\nYour stress level decreases.");
             break;
 
             case 2:
-            Util.displayAns("Fast food high in refined carbs, sugar, and saturated fats can lead to a post-meal energy crash and grogginess.\nYou will likely feel too sluggish or bloated to concentrate properly on your studying.\nYour stress level increases by 3.");
+            Util.displayAns("Fast food high in refined carbs, sugar, and saturated fats can lead to a post-meal energy crash and grogginess.\nYou will likely feel too sluggish or bloated to concentrate properly on your studying.\nYour stress level increases.");
             break;
 
             case 3:
-            Util.displayAns("Skipping a meal leaves you hungry and makes it harder to focus.\nYou may save time now, but studying feels more difficult.\nYour stress level increases by 5.");
+            Util.displayAns("Skipping a meal leaves you hungry and makes it harder to focus.\nYou may save time now, but studying feels more difficult.\nYour stress level increases.");
             break;
         }
         System.out.println();
@@ -88,11 +88,11 @@ public class LunchScene extends Scene{
         
         switch (choice2) {
             case 1:
-            Util.displayAns("Choosing the quiet, noise-free spot beside the building helps calm your mind and lowers your stress levels.\nYour stress level decreases by 3.");
+            Util.displayAns("Choosing the quiet, noise-free spot beside the building helps calm your mind and lowers your stress levels.\nYour stress level decreases.");
             break;
 
             case 2:
-            Util.displayAns("Sitting in the crowded, noisy canteen increases your stress level due to the overwhelming noise environment.\nYour stress level increases by 3.");
+            Util.displayAns("Sitting in the crowded, noisy canteen increases your stress level due to the overwhelming noise environment.\nYour stress level increases.");
             break;
         }
 
@@ -131,15 +131,15 @@ public class LunchScene extends Scene{
         System.out.println();
         switch(choice3){
             case 1:
-            Util.displayAns("Politely declining your friend's offer allows you to focus peacefully on preparing for tomorrow's exam without drama, reducing your overall stress.\nYour stress level decreases by 4.");
+            Util.displayAns("Politely declining your friend's offer allows you to focus peacefully on preparing for tomorrow's exam without drama, reducing your overall stress.\nYour stress level decreases.");
             break;
 
             case 2:
-            Util.displayAns("Reacting with hostility causes tension between you and your friend, creating unnecessary conflict right before your exam and increasing your stress.\nYour stress level increases by 3.");
+            Util.displayAns("Reacting with hostility causes tension between you and your friend, creating unnecessary conflict right before your exam and increasing your stress.\nYour stress level increases.");
             break;
 
             case 3:
-            Util.displayAns("Choosing to go out to karaoke and watch a movie when an exam is tomorrow causes significant stress, knowing you are avoiding study time.\nYour stress level increases by 5.");
+            Util.displayAns("Choosing to go out to karaoke and watch a movie when an exam is tomorrow causes significant stress, knowing you are avoiding study time.\nYour stress level increases.");
             break;
         }
         System.out.println();
@@ -171,11 +171,11 @@ public class LunchScene extends Scene{
         System.out.println();
         switch(choice4){
             case 2:
-            Util.displayAns("Refreshed and properly hydrated, your body gets the clean, natural fuel it needs to stay sharp and maintain balanced, steady focus throughout your study session.\nYour stress level decreases by 3.");
+            Util.displayAns("Refreshed and properly hydrated, your body gets the clean, natural fuel it needs to stay sharp and maintain balanced, steady focus throughout your study session.\nYour stress level decreases.");
             break;
 
             case 1:
-            Util.displayAns("Instead of helping, the strong espresso overstimulates your nervous system, leaving you feeling frantic, restless, and significantly more stressed about your upcoming exam.\nYour stress increases by 5.");
+            Util.displayAns("Instead of helping, the strong espresso overstimulates your nervous system, leaving you feeling frantic, restless, and significantly more stressed about your upcoming exam.\nYour stress increases.");
             break;
         }
         System.out.println();

@@ -66,10 +66,10 @@ public class StudyScene extends Scene {
         System.out.println();
         switch (choice2) {
             case 2:
-                Util.displayAns("You start practicing questions and only look at the notes when necessary.\nYou feel confident and prepared for the exam. Your stress level decreases by 5.");
+                Util.displayAns("You start practicing questions and only look at the notes when necessary.\nYou feel confident and prepared for the exam. Your stress level decreases.");
                 break;
             case 1:
-                Util.displayAns("You look at the notes from page one to the end.\nYou feel overwhelmed and stressed out. Your stress level increases by 5.");
+                Util.displayAns("You look at the notes from page one to the end.\nYou feel overwhelmed and stressed out. Your stress level increases.");
                 break;
         }
 
@@ -110,10 +110,10 @@ public class StudyScene extends Scene {
         System.out.println();
         switch (choice2) {
             case 1:
-                Util.displayAns("You search for the topics online and practice related questions.\nYou begin to feel more prepared.\nYour stress decreases by 5.");
+                Util.displayAns("You search for the topics online and practice related questions.\nYou begin to feel more prepared.\nYour stress decreases.");
                 break;
             case 2:
-                Util.displayAns("You panic and run around instead of studying.\nYour stress increases by 10.");
+                Util.displayAns("You panic and run around instead of studying.\nYour stress increases.");
                 break;
             case 3:
                 Util.displayAns("You accept your situation and stop trying to study.\nYour stress level remains unchanged.");
