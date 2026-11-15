@@ -51,7 +51,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice2) {
             case 2 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 1 :
                 player.changeStress(5);
@@ -91,7 +91,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice2) {
             case 1 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 2 :
                 player.changeStress(10);
@@ -137,7 +137,7 @@ public class StudyScene extends Scene {
         Util.clearConsole();
         switch (choice3) {
             case 1 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 break;
             case 2 :
                 player.changeStress(5);
