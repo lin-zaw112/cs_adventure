@@ -74,7 +74,7 @@ public class CalculusScene extends Scene {
                     player.changeStress(0);
                     break;
                 case 2 :
-                    player.changeStress(5);
+                    player.changeStress(3);
                     break;
             }
             // * Display the player's updated information and the scene's description
@@ -109,13 +109,13 @@ public class CalculusScene extends Scene {
             Util.clearConsole();
             switch (choice2) {
                 case 1 :
-                    player.changeStress(-5);
+                    player.changeStress(-3);
                     break;
                 case 2 :
                     player.changeStress(0);
                     break;
                 case 3 :
-                    player.changeStress(5);
+                    player.changeStress(3);
                     break;
             }
             // * Display the player's updated information and the scene's description
@@ -165,7 +165,7 @@ public class CalculusScene extends Scene {
         Util.clearConsole();
         switch (choice3) {
             case 2 :
-                player.changeStress(-5);
+                player.changeStress(-3);
                 player.setTakeNotes(true);
                 break;
             case 1 :
@@ -173,7 +173,7 @@ public class CalculusScene extends Scene {
                 player.setTakeNotes(true);
                 break;
             case 3 :
-                player.changeStress(5);
+                player.changeStress(3);
                 player.setTakeNotes(false);
                 break;
         }
