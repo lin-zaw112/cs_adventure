@@ -8,7 +8,9 @@ public class Game {
     }
 
     public void start() {
-         musicPlayer.play("./music/slayr_-_Holding_Instrumental.wav");
+//        "./music/Music.wav"
+//    "./music/Music_1.wav"
+         musicPlayer.play("./music/Music.wav");
 
         try {
             Util.clearConsole();
