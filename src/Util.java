@@ -58,6 +58,25 @@ public class Util {
     }
 
     public static void displayAns(String answer) {
-        Util.printTextColor(Util.shinyYellow, answer);
+        // Save the starting position so echoed skip input can be erased.
+        System.out.print("\u001B7" + Util.shinyYellow);
+        for (int i = 0; i < answer.length(); i++) {
+            if (Input.consumeAnimationSkip()) {
+                // Enter moves the terminal cursor. Redraw from the saved position
+                // instead of continuing the sentence on the echoed input line.
+                System.out.print("\u001B8\u001B[0J" + Util.shinyYellow + answer);
+                break;
+            }
+            System.out.print(answer.charAt(i));
+            System.out.flush();
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.print(answer.substring(i + 1));
+                break;
+            }
+        }
+        System.out.println(Util.resetColor);
     }
 }
